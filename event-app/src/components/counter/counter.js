@@ -1,7 +1,6 @@
 import './counter.css';
-// import instagram from '../../images/icons/instagram.png';
-// import tiktok from '../../images/icons/tiktok.png';
-// import snapchat from '../../images/icons/snapchat.png';
+import logo from '../../images/logo.svg';
+import '../../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faSnapchat, faTiktok } from '@fortawesome/free-brands-svg-icons'; 
 import React, { useState, useRef, useEffect } from "react";
@@ -51,10 +50,11 @@ const Countdown = () => {
     );
     const iconStyle =(iconName)=> ({
         display: 'inline-block', 
-        marginRight: '20px', 
+        marginRight: '18px', 
         cursor: 'pointer',
         color: hoverStates[iconName] ? 'white' : '#3FC9AD',
         transition: 'color 0.3s ease',
+        paddingLeft: '3px',
     });
 
     const handleHover = (iconName, isHovered) => {
@@ -66,6 +66,9 @@ const Countdown = () => {
 
     return (
         <section>
+            <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
             <div className='countdown-text'>
                 <p>Countdown to Gallure Lunching....</p>
             </div>
@@ -102,14 +105,21 @@ const Countdown = () => {
         <FontAwesomeIcon icon={faInstagram} style={iconStyle('instagram')} onMouseEnter={handleHover}  />
 
         </a>
+        <hr/>
+
             
             <a href='https://www.snapchat.com/add/gallure23'>
                 <FontAwesomeIcon icon={faSnapchat} style={iconStyle('snapchat')} onMouseEnter={handleHover}   />
             </a>
+            <hr/>
+
             <a href=''>
                 <FontAwesomeIcon icon={faTiktok} style={iconStyle("tiktok")} onMouseEnter={handleHover}   />
             </a>
+
        </div>
+       </header>
+    </div>
        </section>
    );
 

@@ -2,6 +2,9 @@
 .timer{
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
 }
 .timer .circle{
     position: relative;
@@ -72,4 +75,20 @@
     display: flex;
     top: 80%;
     left: 26%;
+}
+
+hr{
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .timer{
+        padding-left: 30px;
+
+    }
+    .social_icons{
+        padding-left: 30px;
+        top: 90%
+    }
 }
