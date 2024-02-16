@@ -39,3 +39,10 @@
     transform: rotate(360deg);
   }
 }
+@media screen and (max-width: 768px) {
+  .App-logo {
+    width: 50%;
+    top: 8%;
+    margin-bottom: 20px;
+  }
+}

@@ -64,17 +64,23 @@
     font-size: 0.25em;
     font-weight: 500;
     letter-spacing: 0.1em;
+    line-height: 30px;
 }
 .countdown-text{
     align-items: center;
     padding-bottom: 30px;
 }
+.countdown-text p{
+    text-decoration: italic;
+    font-size: 18px;
+    font-style: italic;
+}
 
 .social_icons{
     position: absolute;
     display: flex;
-    top: 80%;
-    left: 26%;
+    top: 90%;
+    left: 45%;
 }
 
 hr{
@@ -88,7 +94,7 @@ hr{
 
     }
     .social_icons{
-        padding-left: 30px;
+        left: 34%;
         top: 90%
     }
 }
