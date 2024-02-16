@@ -12,6 +12,11 @@ const Countdown = () => {
     const [timerMinute, setTimerMinute] = useState("00");
     const [timerSeconds, setTimerSeconds] = useState("00");
     let interval = useRef();
+    let circleDayRef = useRef(null);
+    let circleHourRef = useRef(null);
+    let circleMinuteRef = useRef(null);
+    let circleSecondsRef = useRef(null);
+
 
     const startTimer = () => {
         const countdown = new Date("Febuary 29, 2024 00:00:00").getTime();
@@ -31,6 +36,22 @@ const Countdown = () => {
                 setTimerMinute(minute.toString().padStart(2, '0'));
                 setTimerSeconds(seconds.toString().padStart(2, '0'));
             }
+            
+            if (circleDayRef.current) {
+                const dashOffset = 440 - (440 * day) / 365;
+                circleDayRef.current.style.strokeDashoffset = dashOffset;
+            }
+            if (circleHourRef.current) {
+                circleHourRef.current.style.strokeDashoffset = 440 - (440 * hour) / 24;
+            }
+            if (circleMinuteRef.current) {
+                circleMinuteRef.current.style.strokeDashoffset = 440 - (440 * minute) / 60;
+            }
+            if (circleSecondsRef.current) {
+                circleSecondsRef.current.style.strokeDashoffset = 440 - (440 * seconds) / 60;
+            }
+
+   
         }, 1000);
     };
 
@@ -64,6 +85,7 @@ const Countdown = () => {
         }));
     };
 
+    
     return (
         <section>
             <div className="App">
@@ -76,26 +98,26 @@ const Countdown = () => {
            
            <div className="circle" style={{ '--clr': '#C67F7B', color: 'var(--clr)' }} >
                <svg>
-                   <circle cx="70" cy="70" r="70" className="dd" />
+                   <circle ref={circleDayRef} cx="70" cy="70" r="70" className="dd" />
                </svg>
                <div className="days">{timerDay}<br /><span>Days</span></div>
            </div>
            <div className="circle" style={{ '--clr': '#FFC7D0', color: 'var(--clr)' }}>
                <svg>
-                   <circle cx="70" cy="70" r="70" className="hh" />
+                   <circle ref={circleHourRef} cx="70" cy="70" r="70" className="hh" />
                </svg>
                <div className="hours">{timerHour}<br /><span>Hours</span></div>
            </div>
            <div className="circle" style={{ '--clr': '#C9C9C9', color: 'var(--clr)' }} >
                <svg>
-                   <circle cx="70" cy="70" r="70" className="mm" />
+                   <circle  ref={circleMinuteRef} cx="70" cy="70" r="70" className="mm" />
                </svg>
                <div className="minute">{timerMinute}<br /><span>Minutes</span></div>
            </div>
 
            <div className="circle" style={{ '--clr': '#3FC9AD', color: 'var(--clr)' }}>
                <svg>
-                   <circle cx="70" cy="70" r="70" className="ss" />
+                   <circle ref={circleSecondsRef} cx="70" cy="70" r="70" className="ss" />
                </svg>
                <div className="seconds">{timerSeconds}<br /><span>Seconds</span></div>
            </div>

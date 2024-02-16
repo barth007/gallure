@@ -47,6 +47,7 @@
     stroke-linecap: round;
     transform: translate(5px, 5px);
     stroke-dasharray: 440;
+    stroke-dashoffset: 440;
 }
 
 .timer div{
@@ -61,7 +62,7 @@
 .timer div span{
     position: absolute;
     transform: translateX(-50%) translateY(-15px);
-    font-size: 0.25em;
+    font-size: 0.16em;
     font-weight: 500;
     letter-spacing: 0.1em;
     line-height: 30px;
