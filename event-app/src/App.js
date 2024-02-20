@@ -1,11 +1,10 @@
-
-import Counterdown from './components/counter/counter';
+import ContactPage from "./pages/contactPage/contactPage";
 
 function App() {
   return (
-    <div>
-        <Counterdown/>
-    </div>
+    <>
+      <ContactPage/>    
+    </>
   );
 }
 
