@@ -1,9 +1,9 @@
-import ContactPage from "./pages/contactPage/contactPage";
+import AboutUsPage from "./pages/aboutPage/aboutPage";
 
 function App() {
   return (
     <>
-      <ContactPage/>    
+      <AboutUsPage/>    
     </>
   );
 }
