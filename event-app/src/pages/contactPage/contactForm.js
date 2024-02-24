@@ -67,7 +67,6 @@ function ContactForm() {
           margin-left: auto;
           margin-right: auto;
           width: 80%;
-          
         }
         .contact-form-container {
           max-width: 1248px;
