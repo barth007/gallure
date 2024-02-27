@@ -19,6 +19,7 @@ const GalleryPage = ()=>{
     const call_btn_bcolor="rgba(5, 6, 15, 0.04)";
     const con_btn_bcolor ="#192E28";
     const title = "Don't take us by our word, view our Gallery";
+    const bannerTitleColor = "#ba716d"
     return(
         <>
            <section>
@@ -38,7 +39,7 @@ const GalleryPage = ()=>{
                         />
                 </div>
                 <div>
-                    <BannerTitle title={title}/>
+                    <BannerTitle title={title} color={bannerTitleColor}/>
                 </div>
                 <div>
                     <EventCategories/>

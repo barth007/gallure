@@ -1,6 +1,8 @@
 import React from "react";
+import { Link, useNavigate} from "react-router-dom";
 
 function NavBar(props) {
+  const navigate = useNavigate();
   const {
     image_src,
     text_color,
@@ -31,16 +33,16 @@ function NavBar(props) {
 
       <nav className="navigation">
         <ul className="nav-links" style={{color: text_color}}>
-          <li className="nav-item">About Us</li>
+          <li  className="nav-item"><Link  style={{color: text_color}} className="nav-item" to='/'>Home</Link></li>
           <li className="nav-divider"></li>
-          <li className="nav-item">Our Services</li>
+          <li className="nav-item"><Link  style={{color: text_color}} className="nav-item" to='/about'>About Us</Link></li>
           <li className="nav-divider"></li>
-          <li className="nav-item">Gallery</li>
+          <li className="nav-item"><Link  style={{color: text_color}} className="nav-item" to='/gallery'>Gallery</Link></li>
         </ul>
 
         <div className="contact-containers">
           <button className="contact-button" style={{backgroundColor: call_btn_bcolor, color:call_txt_color, border: call_btn_border}}>Call Us</button>
-          <button className="contact-button contact-us" style={{backgroundColor: con_btn_bcolor, color:contact_txt_color, border: con_btn_border}}>Contact Us</button>
+          <button onClick={()=>navigate('/contact')} className="contact-button contact-us" style={{backgroundColor: con_btn_bcolor, color:contact_txt_color, border: con_btn_border}}>Contact Us</button>
         </div>
       </nav>
     </header>
@@ -98,6 +100,7 @@ color: #05060F;
 .nav-item {
 font-family: "Urbanist", sans-serif;
 font-size: 1rem;
+text-decoration: none;
 
 
 }

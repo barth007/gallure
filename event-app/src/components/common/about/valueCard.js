@@ -10,7 +10,9 @@ function EventInnovationSection() {
           </p>
         </article>
         <div className="imageContainer">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/181e3359997ab45ee5a389777378a3bde820b41cc3d464771d8d7d25a77ada29?apiKey=c79a152b41e64f7db55346c2899c15e3&" alt="Creative event decoration" className="eventsImage" />
+          <img loading="lazy" 
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/181e3359997ab45ee5a389777378a3bde820b41cc3d464771d8d7d25a77ada29?apiKey=c79a152b41e64f7db55346c2899c15e3&" 
+          alt="Creative event decoration" className="eventsImage" />
         </div>
       </div>
       <style jsx>{`

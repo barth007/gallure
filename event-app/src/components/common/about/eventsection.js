@@ -31,6 +31,7 @@ function EventInfoComponent() {
           width: 85%;
           margin-left: auto;
           margin-right: auto;
+          margin-top: -120px;
         }
         @media (max-width: 991px) {
           .eventInfoSection {
@@ -50,6 +51,7 @@ function EventInfoComponent() {
         .eventContent {
           gap: 20px;
           display: flex;
+          margin-top: -36px;
         }
         @media (max-width: 991px) {
           .eventContent {
@@ -112,7 +114,7 @@ function EventInfoComponent() {
         .sectionTitle {
           color: #fff;
           letter-spacing: -3px;
-          margin-top: 101px;
+          margin-top: -9px;
           font: 700 60px/72px Helvetica, Arial, sans-serif;
         }
         @media (max-width: 991px) {
@@ -124,7 +126,7 @@ function EventInfoComponent() {
         }
         .sectionDescription {
           color: #fff;
-          margin-top: 72px;
+          margin-top: 49px;
           font: 500 20px/32px Helvetica, Arial, sans-serif;
         }
         @media (max-width: 991px) {
