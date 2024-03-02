@@ -11,15 +11,12 @@ function Footer() {
               <h3>Contact us</h3>
               <div className="section-divider" />
             </header>
-            <p className="address">
-              <strong>Address:</strong>{" "}
-              PO Box 000 Collins Street, New York 73829
-            </p>
+            
             <p className="email">
-              <strong>Mail:</strong> info@gallure.com
+              <strong>Mail:</strong> info@gallure53llc.com
             </p>
             <p className="phone">
-              <strong>Phone:</strong> 1(000) 000-0000
+              <strong>Phone:</strong> (+1)346-603-9196
             </p>
             <p className="office-hours">
               <strong>Office Hours:</strong> 8 AM - 6 PM : Mon - Sat
@@ -30,18 +27,18 @@ function Footer() {
               <h3>Information</h3>
               <div className="section-divider" />
             </header>
+            <p>Home</p>
             <p>About us</p>
-            <p>Services</p>
-            <p>Testimonials</p>
-            <p>Our Values</p>
+            <p>Gallery</p>
+            
           </section>
           <section className="other-info">
             <header className="section-header">
-              <h3>Other Information</h3>
+              <h3>Socials</h3>
               <div className="section-divider" />
             </header>
+            
             <p>Contact Us</p>
-            <p>Social Media</p>
             <div className="social-media-icons">
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/970b90cfb0882deb908b65f43d70097a33c033871f06159bc8dff122bb69aaf9?apiKey=c79a152b41e64f7db55346c2899c15e3&" alt="Social Media Icon" className="icon" />
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e2ca9d50f85109ba96c149d82320af59e6227e44af10076d5deb5af9cb8815e?apiKey=c79a152b41e64f7db55346c2899c15e3&" alt="Social Media Icon" className="icon" />

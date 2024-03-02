@@ -7,7 +7,16 @@ import BookingButton from "./bannerButton";
 const ImageContainer=() =>{
   // URL for the background image
   const imageUrl = "https://cdn.builder.io/api/v1/image/assets/TEMP/8b6e747a-c98b-43bb-8709-a34dafdfbc1f?apiKey=c79a152b41e64f7db55346c2899c15e3&";
-  const title = "Gallore Events – Where Dreams Take Center Stage!";
+  const title = (
+    <div>
+      <span>Gallure Events –</span>
+      <br />
+      <span>Where Dreams Take </span>
+      <br/>
+      <span>Center Stage!</span>
+    </div>
+  );
+  
   const bannerTitleColor = "#192E28"
   const image_src = "https://cdn.builder.io/api/v1/image/assets/TEMP/c6091f7d68ab946ee137a88dc128fde6c599eff2596cdfa11ff50af883553dcf?apiKey=c79a152b41e64f7db55346c2899c15e3&";
   const text_color="#05060F";
@@ -17,6 +26,7 @@ const ImageContainer=() =>{
   const con_btn_border="1px solid #FFF";
   const call_btn_bcolor="rgba(5, 6, 15, 0.04)";
   const con_btn_bcolor ="#192E28";
+  const hamburgerColor ="#05060F"
 
 
   return (
@@ -34,6 +44,7 @@ const ImageContainer=() =>{
                             con_btn_border={con_btn_border}
                             call_btn_bcolor={call_btn_bcolor}
                             con_btn_bcolor={con_btn_bcolor}
+                            hamburgerColor={hamburgerColor}
                         />
       </div>
       <div style={{marginBottom: "10px"}}> <BannerTitle title={title} color={bannerTitleColor}/></div>
@@ -57,9 +68,32 @@ const ImageContainer=() =>{
         
         @media (max-width: 991px) {
           .image-container {
-            height: 200px; // Adjust height for smaller devices
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 800px;
+            
+            
+          }
+          .bookingButton{
+            margin-top: 75px;
+          }
+         
+        }
+
+        @media (max-width: 600px) {
+          .image-container {
+            height: 473px;
+
+          }
+        
+          .bookingButton{
+            padding: 16px 17px;
+            font-size: 15px;
+            margin-top: 50px;
           }
         }
+
       `}</style>
     </section>
   );

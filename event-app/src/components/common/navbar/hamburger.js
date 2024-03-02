@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NavigationMenu from './sideBar';
 
 export default function GalleryHeader() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -27,6 +28,7 @@ export default function GalleryHeader() {
                             <div className="divider" />
                             <div className="nav-link">Gallery</div>
                         </div>
+                       <div> {isSidebarOpen &&(<NavigationMenu/>)}</div>
                         <div className="contact-options">
                             <div className="contact-option">Call Us</div>
                             <div className="contact-option green">Contact Us</div>
@@ -124,9 +126,36 @@ export default function GalleryHeader() {
                     .nav-links-and-contact.active {
                         display: flex;
                     }
+                    .nav-links{
+                        display: none;
+                    }
                     .hamburger {
                         display: block;
                     }
+                    .title{
+                        font-size: 20px;
+                    }
+                    .subtitle{
+                        letter-spacing: 2.04px;
+                        align-self: center;
+                        margin-top: 1px;
+                        font-size: 3px;
+                    }
+                    .company-name{
+                        padding: 0 6px;
+                    }
+                    .logo-and-name {
+                        padding: 1px 11px;
+                        gap: 0px;
+                    }
+                    .hamburger{
+                        padding-right: 10px; 
+                    }
+                    .logo
+                    {
+                        width: 29px;
+                    }
+
                 }
             `}</style>
         </>

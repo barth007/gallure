@@ -43,7 +43,7 @@ function TestimonialCard() {
     const cardContent = [
         {
             
-            testimony: "Lorem ipsum dolor sit amet consectetur. Tincidunt diam vivamus et habitant aliquam sit pulvinar mattis elit. Viverra consectetur sit augue tempus tortor. Arcu leo dui donec nisi cursus pharetra quam pulvinar quisque. Diam massa eget quis consequat turpis facilisi. Sociis massa aenean nibh et amet iaculis elit lectus. Erat pharetra mi sodales donec sit urna quis aenean.",
+            testimony: "Lorem ipsum dolor sit amet consectetur. Tincidunt diam vivamus et habitant aliquam sit pulvinar mattis elit. Viverra consectetur .",
             name: "Miss Laurell Justin",
             position: "Director"
         },
@@ -55,7 +55,7 @@ function TestimonialCard() {
         },
         {
             
-          testimony: "Lorem ipsum dolor sit amet consectetur. Tincidunt diam vivamus et habitant aliquam sit pulvinar mattis elit. Viverra consectetur sit augue tempus tortor. Arcu leo dui donec nisi cursus pharetra quam pulvinar quisque. Diam massa eget quis consequat turpis facilisi. Sociis massa aenean nibh et amet iaculis elit lectus. Erat pharetra mi sodales donec sit urna quis aenean.",
+          testimony: "Lorem ipsum dolor sit amet consectetur. Tincidunt diam vivamus et habitant aliquam sit pulvinar mattis elit. Viverra consectetur ",
           name: "Miss Laurell Justin",
           position: "Director"
       },
@@ -183,9 +183,27 @@ function TestimonialCard() {
       }
       .slick-dots li button:before {
         color: #C67F7B;
-
-
-
+      }
+      @media (max-width: 600px) {
+        .slick-slide div{
+          width: 300px;
+        }
+        .slick-prev{
+          left: -30px;
+        }
+        .slick-next{
+          right: -30px;
+        }
+        .testimonial-text {
+          font-size: 15px; 
+          height: 148px;
+        }
+        .testimonial-author strong{
+          font-size: 15px;
+        }
+        .testimonial-card{
+          padding: 27px 20px;
+        }
       }
     `}</style>
     </>

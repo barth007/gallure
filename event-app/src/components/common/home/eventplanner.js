@@ -5,7 +5,7 @@ function EventPlannerHeader(props) {
   const {title, backgroundColor} = props;
   return (
     <header className="highlight-title_bar" style={{backgroundColor: backgroundColor, padding: '50px 60px 0'}}>
-     <div className='over_all-wrap'> <EventTitle title={title} /></div>
+     <div className='over_all-wrap'> <EventTitle title={title}/></div>
       <PlannerCard/>
       <div className="highlight-bar" />
       <style jsx>{`
@@ -24,14 +24,17 @@ function EventPlannerHeader(props) {
           max-width: 1459px;
           height: 180px;
         }
+        .event-title_bold  {
+          font-size: 80px;
+        }
 
         @media (max-width: 991px) {
-            .highlight-title_bar header {
+         .highlight-title_bar header {
             padding: 0 20px;
           }
 
-          .event-title_bold h1 {
-            font-size: 40px;
+          .event-title_bold  {
+            font-size: 60px;
           }
 
           .highlight-bar {
@@ -46,14 +49,24 @@ function EventPlannerHeader(props) {
 
 function EventTitle({ title }) {
   return (
-    <h1 className='event-title_bold' style={{fontSize: '64px', color: '#d1d5db', fontWeight: '400', letterSpacing: '-2px', textAlign: 'center'}}>{title}
+    <h1 className='event-title_bold' style={{color: '#d1d5db', fontWeight: '400', letterSpacing: '-2px', textAlign: 'center'}}>{title}
     <style jsx>
         {`
+        .event-title_bold  {
+          font-size: 80px;
+        }
           @media (max-width: 991px) {
   
-            .event-title_bold h1 {
-              font-size: 40px;
+            .event-title_bold  {
+              font-size: 60px;
             }
+          }
+
+            @media (max-width: 600px) {
+  
+              .event-title_bold{
+                font-size: 36px;
+              }
         }
   
         `}

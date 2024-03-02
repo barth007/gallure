@@ -133,7 +133,45 @@ function EventInfoComponent() {
           .sectionDescription {
             margin-top: 40px;
           }
+          .eventInfoSection{
+            margin-top: -38px;
+            border-radius: 8px;
+            width: 643px;
+          }
+          .imageWrapper {
+            width: 581px;
+          }
+          .textContent {
+            margin-left: -9px;
+            height: 601px;
+            margin-top: 25px;
+            margin-bottom: 41px;
+          }
         }
+        @media (max-width: 600px) {
+          .textWrapper {
+            width: 337px;
+            margin-left: -18px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+          }
+
+          .eventInfoSection{
+            margin-top: -38px;
+            border-radius: 8px;
+            width: 379px;
+          }
+          .eventContent {
+            margin-top: -45px;
+          }
+
+        }
+        @media (max-width: 600px){
+          .textWrapper{
+            margin-left: 16px;
+          }
+        }
+        
       `}</style>
     </>
   );

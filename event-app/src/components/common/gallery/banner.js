@@ -15,11 +15,23 @@ function BannerTitle(props) {
           font: 700 91px/102px "Plus Jakarta Sans", -apple-system, Roboto, Helvetica, sans-serif;
           margin: 0 auto; /* Center the title */
           padding-top: 10px;
+          
         }
         @media (max-width: 991px) {
           .gallery-title {
-            font-size: 40px;
-            line-height: 50px;
+            
+            font-size: 80px;
+            line-height: 99px;
+            margin-top: 156px;
+            
+          }
+          @media (max-width: 600px) {
+            .gallery-title {
+              font-size: 40px;
+              line-height: 50px;
+                margin-top: 86px;
+            }
+
           }
         }
       `}</style>

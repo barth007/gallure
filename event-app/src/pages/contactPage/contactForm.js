@@ -73,6 +73,7 @@ function ContactForm() {
           display: flex;
           gap: 20px;
           width: 100%;
+          // flex-wrap: wrap;
         }
         .image-gallery {
           display: flex;
@@ -146,6 +147,29 @@ function ContactForm() {
           line-height: normal;
           letter-spacing: -0.8px;
           
+          }
+          @media (max-width: 991px) {
+            .contact-form-container{
+              display: flex;
+              flex-wrap: wrap;
+            }
+            .contact-form-section{
+              border: none;
+
+            }
+            .form-container{
+              border: 1px solid #fff;
+            }
+            .image-gallery{
+              width: 100%;
+            }
+            .form-container{
+              width: 100%;
+            }
+            .contact-form-section{
+              width: 100%;
+            }
+
           }
         }
       `}</style>

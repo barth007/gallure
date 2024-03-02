@@ -1,12 +1,14 @@
 import React from 'react';
 
-function EventInnovationSection() {
+
+function EventInnovationSection({content}) {
+  
   return (
     <section className="eventInnovationSection">
       <div className="contentWrapper">
         <article className="textContainer">
           <p className="eventDescription">
-            We thrive on innovation and bring fresh, imaginative ideas to every event.
+            {content}
           </p>
         </article>
         <div className="imageContainer">

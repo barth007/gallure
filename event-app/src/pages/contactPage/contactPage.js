@@ -15,6 +15,7 @@ const ContactPage=()=>{
     const call_btn_bcolor="#FFF";
     const con_btn_bcolor="#CB8C88";
     const navbackground = "#161616";
+    const hamburgerColor="#FFF";
     return(
         <>
                 <div>
@@ -33,6 +34,7 @@ const ContactPage=()=>{
                 contact_txt_color={contact_txt_color}
                 call_txt_color={call_txt_color}
                 navbackground={navbackground}
+                hamburgerColor={hamburgerColor}
             />
         </div>
         

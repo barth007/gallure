@@ -16,6 +16,7 @@ const AboutUsPage = ()=>{
     const call_btn_border="";
     const con_btn_border="1px solid #FFF";
     const call_btn_bcolor="#BA7975";
+    const hamburgerColor="#FFF"
     // const con_btn_bcolor="#CB8C88";
     // const navbackground = "#161616";
     return (
@@ -33,6 +34,7 @@ const AboutUsPage = ()=>{
                         call_btn_border={call_btn_border}
                         con_btn_border={con_btn_border}
                         call_btn_bcolor={call_btn_bcolor}
+                        hamburgerColor={hamburgerColor}
                     />
                 </div>
             </section>
@@ -65,6 +67,22 @@ const AboutUsPage = ()=>{
                     }
                     .values-background{
                         background-color: #192E28;
+                    }
+                    @media (max-width: 991px) {
+                        .values-background{
+                            display: none;
+                        }
+                        .navbar_wraper-about{
+                            height: 260px;
+                        }
+                        
+
+
+                    }
+                    @media (max-width: 500px) {
+                        .navbar_wraper-about{
+                            height: 165px;
+                        }
                     }
             `}</style>
             

@@ -42,9 +42,7 @@ function EventContactSection() {
          
         }
         @media (max-width: 991px) {
-          .event-contact-section {
-            
-          }
+         
         }
         .content-wrapper {
           margin-top: 198px;
@@ -112,6 +110,10 @@ function EventContactSection() {
         @media (max-width: 991px) {
           .event-image {
             margin-top: 40px;
+          }
+          .event-contact-section {
+            display: none;
+            
           }
         }
       `}</style>

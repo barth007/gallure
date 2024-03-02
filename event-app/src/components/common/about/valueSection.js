@@ -1,32 +1,44 @@
 import React from 'react';
+import EventInnovationSection from "./valueCard";
 
-function ValueCard({ title, borderColor = '#1c2724', backgroundColor = 'rgba(243, 174, 236, 0.02)' }) {
+
+
+function ValueCard({isActive, title, borderColor = '#1c2724', backgroundColor = 'rgba(243, 174, 236, 0.02)', onClick}) {
+
+ 
   return (
-    <div className={`value-card ${borderColor === '#1c2724' ? 'primary-border' : ''}`} style={{ borderColor, backgroundColor }}>
+    <div className={`value-card ${isActive} `} style={{ borderColor, backgroundColor }} onClick={onClick}>
       <h3 className='title-btn' >{title}</h3>
     </div>
   );
 }
 
-function ValuesSection() {
-  const values = [
-    { title: 'Our value', id: 1 },
-    { title: 'Excellence', id: 2 },
-    { title: 'Client-Centric: Tailored Experiences', id: 3 },
-    { title: 'Seamless Execution', id: 4 },
-    { title: 'Diverse Expertise', id: 5 },
-    { title: "Let's Plan Your Next Event!", id: 6 },
-  ];
+function ValuesSection({values, click, activeTab}) {
 
+  
   return (
+    <>
+    
+              
     <section>
       
-      {values.map((value) => (
-        <ValueCard key={value.id} title={value.title} />
+      {values.map((value, index) => (
+        // <ValueCard isActive={ index === activeTab ? 'active' : ''} key={value.id} title={value.title} onClick={()=>handleTabClick(index)}/>
+        <ValueCard 
+        isActive={ index === activeTab ? 'active' : ''} 
+        key={value.id} 
+        title={value.title} 
+        onClick={()=>click(index)}/>
       ))}
-     
-
+                
+          
       <style jsx>{`
+      .values-section_wrap{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        padding:0;
+    }
         .value-card {
           display: flex;
           align-items: center;
@@ -65,6 +77,9 @@ function ValuesSection() {
         }
       `}</style>
     </section>
+   
+    </>
+   
   );
 }
 

@@ -8,13 +8,13 @@ function ContactInfo(props) {
       type: "email",
       src: "https://cdn.builder.io/api/v1/image/assets/TEMP/f7d642bfa564725ba43404d33da305925a32974ca716cb04015b762cb1e7d3a3?apiKey=c79a152b41e64f7db55346c2899c15e3&",
       alt: "Email Icon",
-      contactInfo: "info@gallure.com",
+      contactInfo: "info@gallure53llc.com",
     },
     {
       type: "phone",
       src: "https://cdn.builder.io/api/v1/image/assets/TEMP/cf24d7c12c50d7c985880b4b1d23b4ef768c895a3c69b9d5a1a416393140c3c3?apiKey=c79a152b41e64f7db55346c2899c15e3&",
       alt: "Phone Icon",
-      contactInfo: "234 813 3061 3893",
+      contactInfo: "(+1)346-603-9196",
     }
   ];
 

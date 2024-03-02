@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useRef, useState} from "react";
 import { Link, useNavigate} from "react-router-dom";
+import NavigationMenu from "./sideBar";
 
 function NavBar(props) {
   const navigate = useNavigate();
@@ -12,8 +13,26 @@ function NavBar(props) {
     con_btn_border,
     call_btn_bcolor,
     con_btn_bcolor,
-    navbackground
+    navbackground,
+    hamburgerColor
   }=props;
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // const [isVisible, setIsVisible] = useState(true);
+  
+
+  // const toggleSidebar = () => {
+  //     setIsSidebarOpen(!isSidebarOpen);
+  //     console.log('isSidebarOpen,:', isSidebarOpen,);
+  // };
+  const navRef = useRef()
+  const ShowNavbar = ()=>{
+    navRef.current.classList.toggle(
+      "active"
+    )
+    setIsSidebarOpen(!isSidebarOpen);
+
+  }
   return (
         <>
     <header className="header" style={{backgroundColor: navbackground}}>
@@ -30,8 +49,8 @@ function NavBar(props) {
           <h2 className="company-sub-name">EVENTS LLC</h2>
         </div>
       </div>
-
-      <nav className="navigation">
+      <button className="hamburger" style={{color: hamburgerColor}}onClick={ShowNavbar}>☰</button>
+      <nav ref={navRef} className="navigation">
         <ul className="nav-links" style={{color: text_color}}>
           <li  className="nav-item"><Link  style={{color: text_color}} className="nav-item" to='/'>Home</Link></li>
           <li className="nav-divider"></li>
@@ -39,12 +58,14 @@ function NavBar(props) {
           <li className="nav-divider"></li>
           <li className="nav-item"><Link  style={{color: text_color}} className="nav-item" to='/gallery'>Gallery</Link></li>
         </ul>
-
+        
         <div className="contact-containers">
           <button className="contact-button" style={{backgroundColor: call_btn_bcolor, color:call_txt_color, border: call_btn_border}}>Call Us</button>
           <button onClick={()=>navigate('/contact')} className="contact-button contact-us" style={{backgroundColor: con_btn_bcolor, color:contact_txt_color, border: con_btn_border}}>Contact Us</button>
         </div>
+       {isSidebarOpen && ( <div> <NavigationMenu ShowNavbar={ShowNavbar}/></div>)}
       </nav>
+     
     </header>
      
     <style jsx>{`
@@ -87,6 +108,7 @@ justify-content: space-between;
 gap: 20px;
 font-size: 20px;
 height: 55px;
+transition: transform 0.3s ease-in-out;
 }
 .nav-links {
 display: flex;
@@ -130,8 +152,73 @@ margin: 4px 2px;
 background-color: #192e28;
 color: #fff;
 }
-`
-}</style>
+.hamburger {
+  display: none;
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .navigation.active{
+    display: flex;
+  }
+  .navigation, .contact-container{
+    display: none;
+  }
+  .contact-button{
+    display: None;
+  }
+
+  .nav-links{
+    display: none;
+}
+.hamburger {
+  display: block;
+  padding-left: 388px;
+}
+.company-main-name {
+  font-size: 30px;
+}
+.company-sub-name {
+  font-size: 7px;
+}
+.logo {
+  width: 41px;
+}
+.company-sub-name {
+  letter-spacing: 3.04px;
+  margin-left: 18px;
+}
+}
+@media (max-width: 600px) {
+  .hamburger {
+   
+    padding-left: 312px;
+  }
+  
+}
+@media (max-width: 500px) {
+ 
+.hamburger {
+  padding-left: 157px;
+}
+.company-sub-name {
+  font-size: 9px;
+  letter-spacing: 2.04px;
+  margin-left: 11px;
+}
+.company-main-name{
+  font-size: 26px;
+}
+.logo{
+  width: 40px;
+}
+
+}
+
+`}</style>
  </>
    
   );
