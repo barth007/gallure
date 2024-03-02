@@ -14,7 +14,7 @@ import wedding from "../../../images/cards/wedding.jpg"
 
 function PlannerCard() {
     var settings = {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 2,
@@ -132,10 +132,9 @@ function PlannerCard() {
         
        
       }
-      .planner-card:hover{
-        box-shadow: -25px 18px 5px -4px #CD8B87;
+      .planner-card:hover {
+        box-shadow: -15px 13px 4px -4px #CD8B87;
         border: 3px solid #cd8b87;
-
       }
       .planner-header h2 {
         letter-spacing: -1.67px;
@@ -143,16 +142,16 @@ function PlannerCard() {
         font-size: 1.625rem;
         float: left;
         line-height: 60.23px;
-        // font-size: 20px;
+       
         color: #05060f;
-        margin-bottom: -24px;
+        margin-top: 18px;
       }
       .planner-text {
         color: #1d1c1c;
         font-family: Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
         font-weight: 400;
         line-height: 32px;
-        margin-top: 39px;
+        margin-top: 9px;
         width: 100%;
         height: 100px;
         font-size: 17px;
@@ -169,7 +168,6 @@ function PlannerCard() {
       .planner_photo{
         border-radius: 42px;
         width: 100%;
-        height: 219px;
 
       }
       .planner-avatar {
@@ -221,12 +219,11 @@ function PlannerCard() {
       
     }
     @media (max-width: 500px) {
-      .planner-header h2{
-        
-      }
+      
       .planner-text {
-        line-height: 20px;
-        font-size: 16px;
+        line-height: 24px;
+        font-size: 18px
+    }
 
       }
       .highlight-title_bar header {
@@ -238,11 +235,22 @@ function PlannerCard() {
 
     }
     .planner-footer {
-      margin: 198px 0 12px;
+      margin: 198px 0 12px
     }
-     
+    .planner-card {
+      border-radius: 20px;
+      padding: 5px 17px;
+    }
+    }
+    .planner-card:hover {
+      box-shadow: -18px 13px 4px -7px #CD8B87;
+      border: 2px solid #cd8b87;
+    }
+    .planner_photo {
+      border-radius: 20px;
+    }
       
-    }
+  }
   
     `}</style>
     </>
