@@ -13,7 +13,7 @@ function Footer() {
             </header>
             
             <p className="email">
-              <strong>Mail:</strong> info@gallure53llc.com
+              <strong>E-Mail:</strong> info@gallure53llc.com
             </p>
             <p className="phone">
               <strong>Phone:</strong> (+1)346-603-9196

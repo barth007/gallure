@@ -5,7 +5,7 @@ function EventInnovationSection({content}) {
   
   return (
     <section className="eventInnovationSection">
-      <div className="contentWrapper">
+      <div className="contentWrapper ">
         <article className="textContainer">
           <p className="eventDescription">
             {content}
@@ -28,40 +28,44 @@ function EventInnovationSection({content}) {
           justify-content: center;
           padding: 8px;
         }
-        .contentWrapper {
+        .contentWrapper{
           justify-content: flex-end;
           display: flex;
           flex-direction: column;
           padding: 1px 14px 14px;
-          width: 395px;
+          width: 100%;
         }
-        @media (max-width: 991px) {
-          .contentWrapper {
-            max-width: 100%;
-            padding: 0 20px;
-          }
-        }
+       
         .textContainer {
           color: #fff;
           margin-top: 17px;
-          font: 400 24px/36px "Plus Jakarta Sans", -apple-system, Roboto, Helvetica, sans-serif;
+          font: 400 20px/30px "Plus Jakarta Sans", -apple-system, Roboto, Helvetica, sans-serif;
         }
-        @media (max-width: 991px) {
-          .textContainer {
-            max-width: 100%;
-          }
-        }
+       
         .imageContainer {
           justify-content: center;
           border-radius: 32px;
           background-color: #fff;
           display: flex;
-          margin-top: 59px;
+          margin-top: 28px;
           flex-direction: column;
           
           
         }
+       
         @media (max-width: 991px) {
+          .eventsImage {
+            max-width: 100%;
+          }
+          .contentWrapper {
+            max-width: 100%;
+            padding: 0 4px;
+          }
+          .textContainer {
+            max-width: 100%;
+            font-size: 14px;
+            margin-top: 0;
+          }
           .imageContainer {
             max-width: 100%;
             margin-top: 40px; 
@@ -74,10 +78,9 @@ function EventInnovationSection({content}) {
           width: 100%;
           border-radius: 10px;
         }
-        @media (max-width: 991px) {
-          .eventsImage {
-            max-width: 100%;
-          }
+        .eventInnovationSection {
+          max-width: 598px;
+        }
         }
       `}</style>
     </section>

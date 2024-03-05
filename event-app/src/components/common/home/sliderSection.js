@@ -44,7 +44,12 @@ function EventTestimonyHeader(props) {
         }
           @media (max-width: 600px) {
             .event-title_bold {
-              font-size: 36px;
+              font-size: 27px;
+            }
+          }
+          @media (max-width: 370px){
+            .event-title_bold {
+              font-size: 24px;
             }
           }
       `}</style>
@@ -70,7 +75,7 @@ function EventTitle({ title }) {
             @media (max-width: 600px) {
   
               .event-title_bold {
-                font-size: 36px;
+                font-size: 27px;
               }
             }
         `}

@@ -60,8 +60,8 @@ function NavBar(props) {
         </ul>
         
         <div className="contact-containers">
-          <button className="contact-button" style={{backgroundColor: call_btn_bcolor, color:call_txt_color, border: call_btn_border}}>Call Us</button>
-          <button onClick={()=>navigate('/contact')} className="contact-button contact-us" style={{backgroundColor: con_btn_bcolor, color:contact_txt_color, border: con_btn_border}}>Contact Us</button>
+          {/* <button className="contact-button" style={{backgroundColor: call_btn_bcolor, color:call_txt_color, border: call_btn_border}}>Call Us</button> */}
+          <button onClick={()=>navigate('/contact')} className="contact-button contact-us" style={{backgroundColor: con_btn_bcolor, color:contact_txt_color, border: con_btn_border}}>Get Started</button>
         </div>
        {isSidebarOpen && ( <div> <NavigationMenu ShowNavbar={ShowNavbar}/></div>)}
       </nav>
@@ -137,8 +137,8 @@ gap: 20px;
 }
 .contact-button {
 font-family: "Urbanist", sans-serif;
-padding-left: 1rem;
-padding-right: 1rem;
+padding-left: 2rem;
+padding-right: 2rem;
 padding-top: 0.5rem;
 padding-bottom: 0.5rem;
 border-radius: 12.576px;
@@ -216,6 +216,24 @@ color: #fff;
   width: 40px;
 }
 
+}
+@media (max-width: 370px){
+  .header{
+    margin-left: -17px;
+  }
+  .company-main-name{
+    font-size: 21px;
+  }
+  .company-sub-name{
+    font-size: 5px;
+  }
+  .logo{
+    width: 35px;
+  }
+  .hamburger{
+    padding-left: 65px;
+    font-size: 25px;
+  }
 }
 
 `}</style>

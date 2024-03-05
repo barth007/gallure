@@ -17,11 +17,11 @@ function EventContactSection() {
             />
           </div>
           <article className="text-column">
-            <p className="contact-message">
+            <p className="contact-message_about">
               Contact Gallure Events today, and let the journey to your extraordinary event begin!
             </p>
           </article>
-          <div className="image-column">
+          <div className="image-column drop_side">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/1cc2975969c782a3daff2509f76480a65b537704060edb18180379bf8c39f318?apiKey=c79a152b41e64f7db55346c2899c15e3&"
@@ -41,65 +41,46 @@ function EventContactSection() {
           margin-top: -37%;
          
         }
-        @media (max-width: 991px) {
-         
-        }
+       
         .content-wrapper {
           margin-top: 198px;
           width: 100%;
-          max-width: 1387px;
           display: flex;
-          gap: 20px;
+          gap: 114px;
+          flex-direction: row;
+          justify-content: space-between;
         }
-        @media (max-width: 991px) {
-          .content-wrapper {
-            max-width: 100%;
-            margin-top: 40px;
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0px;
-          }
-        }
+       
         .text-column {
           display: flex;
           flex-direction: column;
           line-height: normal;
           width: 80%;
         }
-        @media (max-width: 991px) {
-          .text-column {
-            width: 100%;
-          }
-        }
-        .contact-message {
+        
+        .contact-message_about {
           color: #fff;
           text-align: center;
           letter-spacing: -2.84px;
           margin-top: 489px;
           font: 700 69px/102px 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
         }
-        @media (max-width: 991px) {
-          .contact-message {
-            margin-top: 40px;
-            font-size: 40px;
-            line-height: 50px;
-          }
-        }
+       
         .image-column {
-          width: 20%;
+          width: 27%;
           margin-left: 2px;
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           line-height: normal;
         }
         .drop_below{
           margin-top:35%;
         }
-        @media (max-width: 991px) {
-          .image-column {
-            width: 100%;
-          }
+        .drop_side{
+          margin-left: 80px;
+          top: -355px;
         }
+       
         .event-image {
           aspect-ratio: 0.36;
           object-fit: cover;
@@ -112,8 +93,69 @@ function EventContactSection() {
             margin-top: 40px;
           }
           .event-contact-section {
-            display: none;
+            display: flex;
+            margin-top: -7%;
             
+          }
+          .event-image {
+            width: 140px;
+          }
+          .image-column {
+            width: 23%;
+          }
+          .drop_below{
+            margin-top: 2%;
+            margin-left: -18px;
+          }
+          .contact-message_about {
+            margin-top: 40px;
+            font-size: 40px;
+            line-height: 50px;
+          }
+          .text-column {
+            width: 88%;
+            margin-left: 72px;
+          }
+          .content-wrapper {
+            max-width: 100%;
+            margin-top: 40px;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 5px;
+            margin-left: 14px;
+          }
+          .drop_side{
+            margin-left: 80px;
+            top: -94px;
+          }
+        }
+        @media (max-width: 600px) {
+          .contact-message_about {
+            margin-top: 40px;
+            font-size: 30px;
+            padding-bottom: 50px;
+          }
+
+        }
+        @media (max-width: 500px) {
+          .text-column {
+            width: 100%;
+            margin-left: 15px;
+          }
+          .drop_side {
+            margin-left: 32px;
+            top: -27px;
+          }
+          .contact-message_about {
+            margin-top: 40px;
+            font-size: 24px;
+            line-height: 37px;
+            padding-bottom: 40px;
+          }
+        }
+        @media (max-width: 370px){
+          .contact-message_about {
+            font-size: 21px;
           }
         }
       `}</style>

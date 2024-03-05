@@ -43,22 +43,28 @@ function TestimonialCard() {
     const cardContent = [
         {
             
-            testimony: "Lorem ipsum dolor sit amet consectetur. Tincidunt diam vivamus et habitant aliquam sit pulvinar mattis elit. Viverra consectetur .",
-            name: "Miss Laurell Justin",
+            testimony: "It was an amazing experience having Gallure events handle my graduation and birthday parties. They worked with me from day 1 and planned within my budget as well. It was top notch, and I absolutely recommend having them take care of your events.",
+            name: "Ugochukwu Onyeakazi",
             position: "Director"
         },
         {
             
-            testimony: "Lorem ipsum dolor sit amet consectetur. Tincidunt diam vivamus et habitant aliquam sit pulvinar mattis elit. Viverra consectetur ",
-            name: "Miss Laurell Justin",
+            testimony: "Super excited to have come across this planner. My son’s birthday was awesome, event tho it was almost a last minute plan, Gallure came through and made our even worth it. I definitely recommend Gallure for your next events and you won’t regret it 😍",
+            name: "ChiChi Ndubuisi",
             position: "Director"
         },
         {
             
-          testimony: "Lorem ipsum dolor sit amet consectetur. Tincidunt diam vivamus et habitant aliquam sit pulvinar mattis elit. Viverra consectetur ",
-          name: "Miss Laurell Justin",
+          testimony: "I recommend Gallure for all your events. They are professionals in their field. ",
+          name: "Muyiwa Fapohunda",
           position: "Director"
       },
+      {
+            
+        testimony: "Excellent services from gallure event ",
+        name: "Daniel Amos",
+        position: "Director"
+    },
      
     ]
   return (
@@ -79,7 +85,7 @@ function TestimonialCard() {
              <span className="testimonial-avatar"></span>
              <div className="testimonial-author">
                <strong >{element.name}</strong><br/>
-               <span >{element.position}</span>
+               {/* <span >{element.position}</span> */}
              </div>
            </footer>
          </article>
@@ -127,7 +133,7 @@ function TestimonialCard() {
         color: #1d1c1c;
         font-family: Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
         font-weight: 400;
-        line-height: 32px;
+        line-height: 25px;
         margin-top: 39px;
         width: 100%;
         height: 258px;
@@ -189,10 +195,10 @@ function TestimonialCard() {
           width: 300px;
         }
         .slick-prev{
-          left: -30px;
+          left: -45px;
         }
         .slick-next{
-          right: -30px;
+          right: -40px;
         }
         .testimonial-text {
           font-size: 15px; 
@@ -203,6 +209,23 @@ function TestimonialCard() {
         }
         .testimonial-card{
           padding: 27px 20px;
+        }
+        .testimonial-card:hover{
+          box-shadow: -14px 13px 2px -5px #CD8B87;
+          border: 2px solid #cd8b87;
+        }
+      }
+      @media (max-width: 370px){
+        .slick-slide div {
+          width: 250px;
+        }
+        .slick-prev {
+          left: -45px;
+        }
+      }
+      @media (max-width: 320px){
+        .slick-slide div{
+          width: 225px;
         }
       }
     `}</style>

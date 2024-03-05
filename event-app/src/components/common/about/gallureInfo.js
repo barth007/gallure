@@ -40,21 +40,42 @@ function EventInfoSection() {
           display: flex;
           justify-content: center;
           align-items: center;
-          padding-left: 50px;
-          padding-right: 50px;
+        
           padding-top: 50px;
           padding-bottom: 100px;
+          width: 100%;
         }
         .event-info_wrapper{
           display: flex;
-          width: 1077px;
           margin-left: auto;
+          width: 80%;
           margin-right: auto;
+          gap: 15px;
         }
         @media (max-width: 991px) {
           .event-info-section {
             padding: 0 20px;
           }
+          .event-info_wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            width: 83%;
+            margin-top: 45px;
+            margin-bottom: 45px;
+            padding-bottom: 50px;
+          }
+        }
+        @media (max-width: 600px) {
+          .event-info_wrapper{
+            width: 65%;
+          }
+
+        }
+        @media (max-width: 500px) {
+          .event-info_wrapper{
+            width: 100%;
+          }
+
         }
       `}</style>
 
@@ -82,11 +103,15 @@ function EventInfoCard({ imageUrl, imageAlt,subTitle, title, description }) {
           margin: 0 10px;
           box-sizing: border-box;
         }
-        @media (max-width: 991px) {
-          .event-info-card {
-            padding: 20px;
-          }
+        .event-info-card {
+          padding: 20px;
+          margin-top: 25px;
         }
+        .event-title {
+          font-size: 40px;
+          line-height: 53px;
+        }
+        
         .event-image_card {
           aspect-ratio: 1;
           object-fit: cover;
@@ -104,12 +129,7 @@ function EventInfoCard({ imageUrl, imageAlt,subTitle, title, description }) {
           font-size: 48px;
           margin-top: -9px;
         }
-        @media (max-width: 991px) {
-          .event-title {
-            font-size: 40px;
-            line-height: 53px;
-          }
-        }
+        
         .event-description {
           color: #fff;
           margin-top: 45px;
@@ -121,6 +141,19 @@ function EventInfoCard({ imageUrl, imageAlt,subTitle, title, description }) {
           .event-description {
             margin-top: 40px;
           }
+          .event-title {
+            font-size: 28px;
+            line-height: 37px;
+          }
+          .event-info-card {
+            padding: 20px;
+            margin-top: 25px;
+          }
+          .event-description {
+            font-size: 14px;
+            margin-top: 17px;
+          }
+
         }
       `}</style>
     </article>

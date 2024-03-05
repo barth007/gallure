@@ -5,6 +5,7 @@ import EventInfoSection from "../../components/common/about/gallureInfo";
 import EventContactSection from "../../components/common/about/eventContact";
 import Values from "../../components/common/about/values";
 import Footer from "../../components/common/footer/footer";
+import EventPlanningValues from "../../components/common/about/toggleValues";
 
 
 const AboutUsPage = ()=>{
@@ -43,8 +44,10 @@ const AboutUsPage = ()=>{
             </div>
             <div className="values-background">
                 <EventInfoSection/>
+                
                 <Values/>
             </div>
+            <div><EventPlanningValues/></div>
             
             <div>
                 <EventContactSection/>
@@ -70,7 +73,7 @@ const AboutUsPage = ()=>{
                     }
                     @media (max-width: 991px) {
                         .values-background{
-                            display: none;
+                            display: flex;
                         }
                         .navbar_wraper-about{
                             height: 260px;
