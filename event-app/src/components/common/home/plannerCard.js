@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import babyshower from "../../../images/cards/babyshower.jpeg";
 import proposals from "../../../images/cards/proposals.jpg";
-import birthdays from "../../../images/cards/birthdays.jpg";
+import birthdays from "../../../images/cards/birthdays.jpeg";
 import corporate from "../../../images/cards/coporate.jpg";
 import anniversaries from "../../../images/cards/anniversaries.jpg";
 import wedding from "../../../images/cards/wedding.jpg"

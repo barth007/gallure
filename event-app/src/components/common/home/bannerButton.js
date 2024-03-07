@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate} from "react-router-dom"
 
 function BookingButton() {
+  const navigate = useNavigate();
   return (
-    <button className="bookingButton">
+    <button onClick={()=>navigate('/contact')} className="bookingButton">
       Click to Book Us
       <style jsx>{`
         .bookingButton {

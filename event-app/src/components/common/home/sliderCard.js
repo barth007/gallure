@@ -222,7 +222,18 @@ function TestimonialCard() {
         .slick-prev {
           left: -45px;
         }
+        .testimonial-avatar{
+          height: 31px
+        }
+        .testimonial-author strong {
+          font-size: 13px;
+        }
+        .testimonial-footer{
+          padding: 5px 6px;
+          margin: 144px 0 40px;
+        }
       }
+      
       @media (max-width: 320px){
         .slick-slide div{
           width: 225px;

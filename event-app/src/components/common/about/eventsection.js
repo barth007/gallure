@@ -1,6 +1,7 @@
 import React from "react";
 
 function EventInfoComponent() {
+  const title = (<span>About <br/> Gallure Events</span>)
   return (
     <>
       <section className="eventInfoSection">
@@ -11,7 +12,7 @@ function EventInfoComponent() {
             </div>
             <div className="textContent">
               <section className="textWrapper">
-                <h2 className="sectionTitle">About Gallure Events</h2>
+                <h2 className="sectionTitle">{title}</h2>
                 <p className="sectionDescription">
                   At Gallure Events, we are passionate about turning your dreams into unforgettable moments. As a premier event planning company, we take pride in our commitment to excellence, creativity, and seamless execution. From concept to completion, we are dedicated to crafting events that leave a lasting impression.
                 </p>
@@ -28,16 +29,15 @@ function EventInfoComponent() {
           background-color: #fff;
           display: flex;
           padding: 50px;
-          width: 85%;
+          max-width: 1400px;
           margin-left: auto;
           margin-right: auto;
           margin-top: -120px;
+          
         }
         
         .eventInfoContainer {
           margin-top: 38px;
-          width: 100%;
-          max-width: 1248px;
         }
        
         .eventContent {
@@ -52,7 +52,7 @@ function EventInfoComponent() {
           display: flex;
           flex-grow: 1;
           flex-direction: column;
-          width: 500px;
+          max-width: 600px;
         }
         
         .eventImage {
@@ -65,8 +65,7 @@ function EventInfoComponent() {
           display: flex;
           flex-direction: column;
           line-height: normal;
-          margin-left: 20px;
-          width: 500px;
+          max-width: 600px;
         }
         
         .textWrapper {
@@ -77,7 +76,7 @@ function EventInfoComponent() {
           flex-direction: column;
           align-items: start;
           width: 100%;
-          padding: 50px 80px 50px 40px;
+          padding: 150px 80px 50px 40px;
         }
        
         .sectionTitle {
@@ -99,25 +98,22 @@ function EventInfoComponent() {
           .eventInfoSection{
             margin-top: -38px;
             border-radius: 8px;
-            width: 643px;
+            max-width: 740px;
           }
           .imageWrapper {
-            width: 581px;
+            width: 100%;
           }
           .textContent {
-            margin-left: -9px;
             height: 601px;
             margin-top: 25px;
             margin-bottom: 41px;
+            width: 100%;
           }
           .imageWrapper {
             max-width: 100%;
             margin-top: 24px;
           }
-          .eventInfoContainer {
-            max-width: 100%;
-            margin-left: 10px;
-          }
+          
           .sectionTitle {
             margin-top: 40px;
             font-size: 40px;
@@ -126,9 +122,7 @@ function EventInfoComponent() {
           .textWrapper {
             padding: 20px;
           }
-          .textContent {
-            width: 100%;
-          }
+          
           .eventImage {
             max-width: 100%;
           }
@@ -141,44 +135,61 @@ function EventInfoComponent() {
             padding: 0 20px;
           }
         }
-        @media (max-width: 600px) {
-          .textWrapper {
-            width: 100%;
-            margin-left: -18px;
-            margin-top: 15px;
-            margin-bottom: 20px;
+
+        @media (max-width: 750px){
+          .eventInfoSection{
+            max-width: 659px;
           }
 
+        }
+        @media (max-width: 650px){
           .eventInfoSection{
-            margin-top: -38px;
-            border-radius: 8px;
-            width: 379px;
+            max-width: 606px;
           }
-          .eventContent {
-            margin-top: -45px;
+
+        }
+        @media (max-width: 600px){
+            .eventInfoSection{
+              max-width: 546px;
+              margin-top: -52px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+        }
+        @media (max-width: 500px){
+          .eventInfoSection {
+            width: 383px;
+            margin-top: -52px;
+            margin-left: auto;
+            margin-right: auto;
           }
-          .eventInfoContainer {
-            max-width: 100%;
-            margin-left: 0px;
-          }
-          .textWrapper{
-            margin-left: 16px;
+        }
+        @media (max-width: 400px){
+          .eventInfoSection{
+            max-width: 345px;
+
           }
           .sectionTitle{
             font-size: 30px;
-          }
-
-        }
-        @media (max-width: 370px){
-          .eventInfoSection {
-            width: 271px;
+            line-height: 37px;
           }
           .sectionDescription{
-            font: 500 15px/22px Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 30px;
 
           }
         }
-       
+        @media (max-width: 360px){
+          .eventInfoSection {
+            max-width: 335px;
+          }
+        }
+        @media (max-width: 320px){
+          .eventInfoSection {
+            max-width: 295px;
+          }
+
+        }
         
       `}</style>
     </>

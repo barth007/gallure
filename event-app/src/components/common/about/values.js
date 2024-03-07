@@ -1,6 +1,7 @@
 import ValuesSection from "./valueSection";
 import EventInnovationSection from "./valueCard";
 import React, {useState} from "react";
+import plan from "../../../images/cards/plan.jpeg"
 
 
 
@@ -14,34 +15,41 @@ const Values = ()=>{
     { 
       title: 'What we do', 
       id: 1, 
-      content: "We thrive on innovation and bring fresh, imaginative ideas to every event."
+      content: "We thrive on innovation and bring fresh, imaginative ideas to every event.",
+      src: plan
     },
     { 
       title: 'Excellence', 
       id: 2, 
-      content: "Our commitment to excellence is reflected in every aspect of our work, from meticulous planning to flawless execution." 
+      content: "Our commitment to excellence is reflected in every aspect of our work, from meticulous planning to flawless execution." ,
+      src: plan
     },
     { 
       title: 'Client-Centric: Tailored Experiences', 
       id: 3, 
-      content: "Your satisfaction is our priority. We listen, understand, and tailor our services to meet your unique needs." 
+      content: "Your satisfaction is our priority. We listen, understand, and tailor our services to meet your unique needs.",
+      src: plan
     },
     { 
       title: 'Seamless Execution', 
       id: 4,
-      content: "At Gallure Events, we tailor each event to match your unique style and personality. Working closely with you, we craft custom experiences that go beyond your expectations."
+      content: "At Gallure Events, we tailor each event to match your unique style and personality. Working closely with you, we craft custom experiences that go beyond your expectations.",
+      src: plan
     },
     { 
       title: 'Diverse Expertise', 
       id: 5,
-      content: "Our dedicated team ensures flawless event execution. From meticulous planning to on-site management, we handle every detail so you can relax and enjoy your special day worry-free." 
+      content: "Our dedicated team ensures flawless event execution. From meticulous planning to on-site management, we handle every detail so you can relax and enjoy your special day worry-free.",
+      src: plan 
     },
     { 
       title: "Let's Plan Your Next Event!", 
       id: 6,
-      content: "Gallure Events transforms your dreams into reality, whether it's a wedding, corporate gala, or milestone celebration. Let us handle the stress of planning so you can cherish every moment of your special day."
+      content: "Gallure Events transforms your dreams into reality, whether it's a wedding, corporate gala, or milestone celebration. Let us handle the stress of planning so you can cherish every moment of your special day.",
+      src: plan
     },
   ];
+  console.log(values[activeTab].src)
     return (
         <>
         <section className="value-outer_wrap">
@@ -49,10 +57,11 @@ const Values = ()=>{
                 <h2 className="value-title">Our Values</h2>
             </div>
             <div className="values-section_wrap">
+            
                 
                 
                 <div>
-                <EventInnovationSection content={values[activeTab].content}/>
+                <EventInnovationSection content={values[activeTab].content} src={values[activeTab].src}/>
                 </div>
                 <div><ValuesSection activeTab={activeTab} values={values} click={handleTabClick}/></div>
                 
@@ -65,6 +74,8 @@ const Values = ()=>{
             gap: 20px;
             justify-content: center;
             padding:0;
+            max-width: 1000px;
+            margin-left: 25px;
         }
         .value-outer_wrap{
             display: flex;
@@ -75,8 +86,9 @@ const Values = ()=>{
             margin-left: auto;
             margin-right: auto;
             border-radius: 20px;
-            width: 1071px;
+            max-width: 1200px;
             z-index: 1;
+            margin-bottom: -597px;
         }
         .value-title{
             font-family: "Plus Jakarta Sans";
@@ -88,12 +100,13 @@ const Values = ()=>{
             color: #FFF;
         }
         .value-title_wrap{
-          margin-left: 4%;
+          
             width: 28%;
             padding: 20px;
         }
         @media (max-width: 991px) {
           .value-outer_wrap{
+            visibility: hidden;
             display: none;
           }
 

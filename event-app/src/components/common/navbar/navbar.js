@@ -44,7 +44,7 @@ function NavBar(props) {
           alt="Company Logo"
           className="logo"
         />
-        <div className="company-names">
+        <div onClick={()=>navigate('/')}  className="company-names">
           <h1 className="company-main-name">Gallure</h1>
           <h2 className="company-sub-name">EVENTS LLC</h2>
         </div>
@@ -84,10 +84,11 @@ width: 70px;
 aspect-ratio: 1.56;
 object-fit: cover;
 }
-company-names {
+.company-names {
 display: flex;
 flex-direction: column;
-padding: 0 20px;
+
+cursor: pointer;
 }
 .company-main-name {
 font-size: 40px;
@@ -195,7 +196,10 @@ color: #fff;
 @media (max-width: 600px) {
   .hamburger {
    
-    padding-left: 312px;
+    padding-left: 246px;
+  }
+  .header{
+    gap: 6px;
   }
   
 }

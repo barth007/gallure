@@ -1,6 +1,7 @@
 import React from "react";
 import net from "../../../images/about/net.png";
 function EventContactSection() {
+  const message = (<span>Contact Gallure Events<br/>today, and let the journey<br/>to your extraordinary<br/>event begin!</span>)
   return (
     <>
     
@@ -18,7 +19,7 @@ function EventContactSection() {
           </div>
           <article className="text-column">
             <p className="contact-message_about">
-              Contact Gallure Events today, and let the journey to your extraordinary event begin!
+             {message}
             </p>
           </article>
           <div className="image-column drop_side">
@@ -38,15 +39,15 @@ function EventContactSection() {
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-top: -37%;
+          margin-top: 2%;
          
         }
        
         .content-wrapper {
-          margin-top: 198px;
+          margin-top: 280px;
           width: 100%;
           display: flex;
-          gap: 114px;
+          // gap: 114px;
           flex-direction: row;
           justify-content: space-between;
         }
@@ -78,7 +79,7 @@ function EventContactSection() {
         }
         .drop_side{
           margin-left: 80px;
-          top: -355px;
+          top: -137px;
         }
        
         .event-image {

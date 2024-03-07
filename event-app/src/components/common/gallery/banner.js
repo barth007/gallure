@@ -19,20 +19,25 @@ function BannerTitle(props) {
         }
         @media (max-width: 991px) {
           .gallery-title {
-            
-            font-size: 80px;
-            line-height: 99px;
+            font-size: 65px;
+            line-height: 84px;
             margin-top: 156px;
-            
           }
+        }
           @media (max-width: 600px) {
             .gallery-title {
               font-size: 40px;
               line-height: 50px;
                 margin-top: 86px;
             }
-
+        }
+        @media (max-width: 300px){
+          .gallery-title {
+            font-size: 30px;
+            line-height: 38px;
+              
           }
+
         }
       `}</style>
     </section>

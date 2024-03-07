@@ -1,7 +1,11 @@
 import * as React from "react";
+import { Link, useNavigate} from "react-router-dom";
+import snapchat from "../../../images/icons/snapchat.svg"
+import tiktok from "../../../images/icons/tiktok.svg"
 
 
 function Footer() {
+  const text_color="rgba(153,153,153,1)";
   return (
     <>
       <footer className="footer">
@@ -27,9 +31,9 @@ function Footer() {
               <h3>Information</h3>
               <div className="section-divider" />
             </header>
-            <p>Home</p>
-            <p>About us</p>
-            <p>Gallery</p>
+            <p><Link style={{color: text_color}} className="nav-item" to='/'>Home</Link></p>
+            <p><Link style={{color: text_color}} className="nav-item" to='/about'>About us</Link></p>
+            <p><Link style={{color: text_color}} className="nav-item" to='/gallery'>Gallery</Link></p>
             
           </section>
           <section className="other-info">
@@ -40,9 +44,9 @@ function Footer() {
             
             <p>Contact Us</p>
             <div className="social-media-icons">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/970b90cfb0882deb908b65f43d70097a33c033871f06159bc8dff122bb69aaf9?apiKey=c79a152b41e64f7db55346c2899c15e3&" alt="Social Media Icon" className="icon" />
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e2ca9d50f85109ba96c149d82320af59e6227e44af10076d5deb5af9cb8815e?apiKey=c79a152b41e64f7db55346c2899c15e3&" alt="Social Media Icon" className="icon" />
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ff85b725b52a642a65d7a30b76d8aad07d8adf095bb4e518349212ebfd66562?apiKey=c79a152b41e64f7db55346c2899c15e3&" alt="Social Media Icon" className="icon" />
+              <Link to="https://www.snapchat.com/add/gallure23"><img src={snapchat} alt="Social Media Icon" className="icon" /></Link>
+              <Link to=""><img src={tiktok} alt="Social Media Icon" className="icon" /></Link>
+             <Link to="https://www.instagram.com/gallure_events?igsh=MXdmcGo0eXVqNDN0ZQ=="><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ff85b725b52a642a65d7a30b76d8aad07d8adf095bb4e518349212ebfd66562?apiKey=c79a152b41e64f7db55346c2899c15e3&" alt="Social Media Icon" className="icon" /></Link> 
             </div>
           </section>
           <section className="get-started">
@@ -50,8 +54,8 @@ function Footer() {
               <h3>Get Started</h3>
               <div className="section-divider" />
             </header>
-            <p>Consultation</p>
-            <p>Booking</p>
+            <p><Link style={{color: text_color}} className="nav-item" to='/contact'>Consultation</Link></p>
+            <p><Link style={{color: text_color}} className="nav-item" to='/contact'>Booking</Link></p>
           </section>
         </div>
       </footer>

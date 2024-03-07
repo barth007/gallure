@@ -251,10 +251,18 @@ function ListImages(props) {
           align-self: stretch;
         }
         .div-2 {
-          gap: 20px;
+          gap: 21px;
           display: flex;
           justify-content: end;
-          margin-left: 148px
+          margin-left: 90px;
+          margin-right: 90px;
+          height: auto;
+          // border: 1px #000 solid;
+          background-color: #FFF;
+          max-width: 1300px;
+          padding-bottom: 52px;
+          margin-top: 14%;
+          margin-bottom: -446px
         }
         @media (max-width: 991px) {
           .div-2 {
@@ -738,6 +746,93 @@ function ListImages(props) {
           object-fit: auto;
           object-position: center;
           width: 100%;
+        }
+        @media (max-width: 900px){
+          .div-2 {
+            flex-direction: row;
+            align-items: stretch;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-left: 30px;
+            margin-right: 30px;
+            }
+          .column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            margin-left: 0px;
+            width: 40%;
+          }
+          .column-2 {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            margin-left: -8px;
+            width: 40%;
+          }
+          .div-14 {
+            
+            margin-top: -11px;
+          }
+          div-19 {
+            margin-top: -35px;
+          }
+          .column-3 {
+            width: 80%;
+          }
+          .div-14 {
+            display: flex;
+            flex-direction: row;
+          }
+          .div-19 {
+            margin-top: -36px;
+            margin-left: 7px;
+          }
+          .column-7{
+            display:none;
+            // visibility: hidden;
+          }
+          .column-3{
+            display: none;
+          }
+        }
+        @media (max-width: 800px){
+          .div-19 {
+            margin-top: -36px;
+            margin-left: 100px;
+            width: 56%;
+          }
+
+        }
+        @media (max-width: 700px){
+          .div-2{
+            margin-bottom: -152px;
+          }
+        }
+        @media (max-width: 600px){
+          .div-2 {
+            margin-bottom: -184px;
+          }
+        }
+        @media (max-width: 400px){
+          .div-2{
+            margin-bottom: -155px;
+          }
+          .div-21 {
+            margin-top: 32px;
+            margin-left: 6px;
+          }
+          column-3 {
+            width: 87%;
+          }
+          .div-15 {
+            
+            margin-left: 8px;
+          } 
+          .column-5 {
+            margin-left: 1px;
+          }
         }
       `}</style>
     </>

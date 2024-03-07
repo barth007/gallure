@@ -87,6 +87,11 @@ const AboutUsPage = ()=>{
                             height: 165px;
                         }
                     }
+                    @media (max-width: 370){
+                        .about-inverse{
+                            margin-top: -20%;
+                        }
+                    }
             `}</style>
             
 

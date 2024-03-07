@@ -96,6 +96,8 @@ const [activeTab, setActiveTab] = useState(null);
         background-color: #0d0d0d;
         padding-bottom: 76px;
         padding-top: 52px;
+        visibility: hidden;
+        display:none;
 }
       }
       .title-wrapper_section{
@@ -144,7 +146,18 @@ const [activeTab, setActiveTab] = useState(null);
             text-align: center;
 
         }
+        @media (max-width: 991px){
+          .main-value_section{
+            visibility: visible;
+            display: block;
+          }
+        }
         @media (max-width: 600px){
+          .event-values-main{
+              max-width: 448px;
+          }
+      }
+        @media (max-width: 500px){
             .event-values-main{
                 max-width: 331px;
             }

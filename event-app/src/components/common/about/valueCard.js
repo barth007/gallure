@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function EventInnovationSection({content}) {
+function EventInnovationSection({content, src}) {
   
   return (
     <section className="eventInnovationSection">
@@ -13,7 +13,7 @@ function EventInnovationSection({content}) {
         </article>
         <div className="imageContainer">
           <img loading="lazy" 
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/181e3359997ab45ee5a389777378a3bde820b41cc3d464771d8d7d25a77ada29?apiKey=c79a152b41e64f7db55346c2899c15e3&" 
+          src={src}
           alt="Creative event decoration" className="eventsImage" />
         </div>
       </div>
@@ -23,7 +23,7 @@ function EventInnovationSection({content}) {
           border-radius: 16px;
           background-color: #1f1f1f;
           display: flex;
-          max-width: 572px;
+          max-width: 573px;
           flex-direction: column;
           justify-content: center;
           padding: 8px;
