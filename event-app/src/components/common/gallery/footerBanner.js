@@ -10,6 +10,7 @@ const BannerFooter = ()=>{
                 background-color: #EB9BFF38;
                 height: 100vh;
                 z-index: -1;
+                
             }
             @media (max-width: 900px){
                 .main-banner_footer{

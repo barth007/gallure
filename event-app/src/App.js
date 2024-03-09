@@ -9,6 +9,10 @@ import ContactPage from "./pages/contactPage/contactPage";
 import GalleryPage from "./pages/galleryPage/gallery";
 import HomePage from "./pages/homePage/homePage";
 import NotFound from "./pages/notFound/NotFound";
+// import dotenv from 'dotenv';
+
+
+// dotenv.config();
 
 
 

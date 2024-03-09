@@ -1,26 +1,69 @@
-import React from "react";
+import React, {useState} from "react";
+import emailjs from 'emailjs-com'
+import dotenv from 'dotenv';
+
+
+dotenv.config();
+
 
 function ContactForm() {
+  const service_id = process.env.REACT_APP_SERVICE_ID
+  const user_id = process.env.REACT_APP_USER_ID
+  const template_id = process.env.REACT_APP_TEMPLATE_ID
+  console.log(`service_id: ${service_id}, user_id: ${user_id}, template_id: ${template_id}`)
+  const [formData, setFormData] = useState({
+    from_name: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+  const handleChange = (e)=>{
+    setFormData({...formData, [e.target.name]: e.target.value});
+  }
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    emailjs.sendForm( service_id, template_id, e.target, user_id).then((result)=>{
+      console.log('Email sent successfully:', result.text);
+        alert('Email sent successfully!');
+        setFormData({
+          from_name: '',
+          phone: '',
+          email: '',
+          message:''
+        });
+    }, (error)=>{
+      console.error('Error occurred:', error)
+      alert("An error occured While sending the message please try again later")
+    });
+  }
   const imageAssets = [
     {
       id: "email",
       alt: "Email Address",
-      placeholder: "Enter Email Address"
+      placeholder: "Enter Email Address",
+      name: "email",
+      value: formData.email
     },
     {
       id: "fullname",
       alt: "Full Name",
-      placeholder: "Enter Full Name"
+      placeholder: "Enter Full Name",
+      name: "name",
+      value: formData.name
     },
     {
       id: "phone",
       alt: "Phone Number",
-      placeholder: "Enter Phone Number"
+      placeholder: "Enter Phone Number",
+      name: "phone",
+      value: formData.phone
     },
     {
       id: "message",
       alt: "Message",
-      placeholder: "Enter Message"
+      placeholder: "Enter Message",
+      name: "message",
+      value: formData.message
     }
   ];
 
@@ -33,18 +76,24 @@ function ContactForm() {
           </aside>
           <main className="form-container">
             <header className="form-header">Contact Us!</header>
-            <form>
-              {imageAssets.map(({ id, placeholder, alt }) => (
+            <form onSubmit={handleSubmit}>
+              {imageAssets.map(({ id, placeholder, alt, name, value }) => (
                 <div key={id} className="input-group">
                   <label htmlFor={id} className="input-label">{alt}</label>
                   {id === "message" ? (<input 
                   type="text" 
-                  id={id} 
+                  id={id}
+                  name={name}
+                  value={value}
+                  onChange={handleChange}
                   className="input-field message" 
                   placeholder={placeholder} 
                   aria-label={alt} />) : (<input 
                   type="text" 
-                  id={id} 
+                  id={id}
+                  name={name}
+                  value={value}
+                  onChange={handleChange}
                   className="input-field " 
                   placeholder={placeholder} 
                   aria-label={alt} /> )}
