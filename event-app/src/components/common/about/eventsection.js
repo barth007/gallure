@@ -170,7 +170,7 @@ function EventInfoComponent() {
         }
         @media (max-width: 600px){
             .eventInfoSection{
-              max-width: 546px;
+              max-width: 505px;
               margin-top: -52px;
               margin-left: auto;
               margin-right: auto;

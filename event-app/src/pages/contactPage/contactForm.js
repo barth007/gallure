@@ -110,18 +110,16 @@ function ContactForm() {
           justify-content: center;
           align-items: center;
           background-color: #131212;
-          padding: 50px;
+          padding: 26px;
           border-radius: 32px;
           border: 1px solid #fff;
           margin-left: auto;
           margin-right: auto;
-          width: 80%;
+          max-width: 1200px;
         }
         .contact-form-container {
-          max-width: 1248px;
           display: flex;
           gap: 20px;
-          width: 100%;
           // flex-wrap: wrap;
         }
         .image-gallery {
@@ -215,8 +213,16 @@ function ContactForm() {
             .form-container{
               width: 100%;
             }
-            .contact-form-section{
-              width: 100%;
+           
+            .banner-image, .decorative-image{
+              height: 250px;
+            }
+            .form-header {
+              font-size: 22px;
+              margin-bottom: 51px;
+            }
+            .input-label{
+              font-size: 16px;
             }
 
           }
