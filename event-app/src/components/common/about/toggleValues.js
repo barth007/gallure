@@ -2,6 +2,12 @@ import React,{useState} from "react";
 import polygon from "../../../images/icons/polygon.svg";
 import downPolygon from "../../../images/icons/downPolygon.svg";
 import EventInnovationSection from "./valueCard";
+import plan from "../../../images/about/plan.jpg"
+import event from "../../../images/about/event.png"
+import excellence from "../../../images/about/excellence.jpg"
+import experience from "../../../images/about/experience.jpg"
+import execution from "../../../images/about/execution.jpg"
+import expertise from "../../../images/about/expertise.jpg"
 
 // Reusable component for value sections
 const ValueSection = ({ title, altText, onClick, isActiveTab }) => (
@@ -16,7 +22,7 @@ const EventPlanningValues = () => {
   const values = [
     {
       title: "What we do",
-      imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/fd49f20ca32f7759b2e8f5211e7ef2348020a298b7d7972137ca13ce1839b416?apiKey=c79a152b41e64f7db55346c2899c15e3&",
+      imageSrc: event,
       altText: "Symbolizing our company values",
       content: "We thrive on innovation and bring fresh, imaginative ideas to every event.",
       id: 0
@@ -24,14 +30,14 @@ const EventPlanningValues = () => {
     {
       title: "Excellence",
       subtitle: "We thrive on innovation and bring fresh, imaginative ideas to every event.",
-      imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/f9ea2b84ec270ad4577a89ae6826a0fc890cae1c09930c63e955460c1b4a51ab?apiKey=c79a152b41e64f7db55346c2899c15e3&",
+      imageSrc: excellence,
       altText: "Excellence in service",
       content: "Our commitment to excellence is reflected in every aspect of our work, from meticulous planning to flawless execution.",
       id: 1,
     },
     {
       title: "Client-Centric: Tailored Experiences",
-      imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/11bd9e5ce91fbb5ac9b782775754b44d487cb04d1fa7e13d5bd6362057cdd965?apiKey=c79a152b41e64f7db55346c2899c15e3&",
+      imageSrc: experience,
       altText: "Focused on our clients",
       content: "Your satisfaction is our priority. We listen, understand, and tailor our services to meet your unique needs.",
       id: 2,
@@ -39,21 +45,21 @@ const EventPlanningValues = () => {
     
     {
       title: "Seamless Execution",
-      imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/dcd221954da83da63a3aacaf66471b2c5e80eb7c2ab56e41a4e2bb0369e08046?apiKey=c79a152b41e64f7db55346c2899c15e3&",
+      imageSrc: execution,
       altText: "Ensuring seamless event execution",
       content: "At Gallure Events, we tailor each event to match your unique style and personality. Working closely with you, we craft custom experiences that go beyond your expectations.",
       id: 3,
     },
     {
       title: "Diverse Expertise",
-      imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/703178b4dc2d292a294619e7a3b463018c584c23921225f9d42a7e705105f4e3?apiKey=c79a152b41e64f7db55346c2899c15e3&",
+      imageSrc: expertise,
       altText: "Highlighting our diverse expertise",
       content: "Our dedicated team ensures flawless event execution. From meticulous planning to on-site management, we handle every detail so you can relax and enjoy your special day worry-free.",
       id: 4,
     },
     {
       title: "Let's Plan Your Next Event!",
-      imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/81e08f3651142afd4faa895f31f48a58ab20a250a1746280198b322d261e51bb?apiKey=c79a152b41e64f7db55346c2899c15e3&",
+      imageSrc: plan,
       altText: "Inviting you to plan the next event with us",
       content: "Gallure Events transforms your dreams into reality, whether it's a wedding, corporate gala, or milestone celebration. Let us handle the stress of planning so you can cherish every moment of your special day.",
       id: 5,
@@ -83,7 +89,7 @@ const [activeTab, setActiveTab] = useState(null);
                 isActiveTab={activeTab === index ? 'active': ''}
                 {...value}  onClick={()=>handleTabClick(index)}/>
                 
-                { activeTab === index ? <EventInnovationSection content={value.content} /> : null}
+                { activeTab === index ? <EventInnovationSection content={value.content} images={value.imageSrc}/> : null}
                
               </React.Fragment>
                )

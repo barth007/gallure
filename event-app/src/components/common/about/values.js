@@ -1,7 +1,13 @@
 import ValuesSection from "./valueSection";
 import EventInnovationSection from "./valueCard";
 import React, {useState} from "react";
-import plan from "../../../images/cards/plan.jpeg"
+import plan from "../../../images/about/plan.jpg"
+import event from "../../../images/about/event.png"
+import excellence from "../../../images/about/excellence.jpg"
+import experience from "../../../images/about/experience.jpg"
+import execution from "../../../images/about/execution.jpg"
+import expertise from "../../../images/about/expertise.jpg"
+
 
 
 
@@ -16,31 +22,31 @@ const Values = ()=>{
       title: 'What we do', 
       id: 1, 
       content: "We thrive on innovation and bring fresh, imaginative ideas to every event.",
-      src: plan
+      src: event
     },
     { 
       title: 'Excellence', 
       id: 2, 
       content: "Our commitment to excellence is reflected in every aspect of our work, from meticulous planning to flawless execution." ,
-      src: plan
+      src: excellence
     },
     { 
       title: 'Client-Centric: Tailored Experiences', 
       id: 3, 
       content: "Your satisfaction is our priority. We listen, understand, and tailor our services to meet your unique needs.",
-      src: plan
+      src: experience
     },
     { 
       title: 'Seamless Execution', 
       id: 4,
       content: "At Gallure Events, we tailor each event to match your unique style and personality. Working closely with you, we craft custom experiences that go beyond your expectations.",
-      src: plan
+      src: execution
     },
     { 
       title: 'Diverse Expertise', 
       id: 5,
       content: "Our dedicated team ensures flawless event execution. From meticulous planning to on-site management, we handle every detail so you can relax and enjoy your special day worry-free.",
-      src: plan 
+      src: expertise 
     },
     { 
       title: "Let's Plan Your Next Event!", 
@@ -61,7 +67,7 @@ const Values = ()=>{
                 
                 
                 <div>
-                <EventInnovationSection content={values[activeTab].content} src={values[activeTab].src}/>
+                <EventInnovationSection content={values[activeTab].content} images={values[activeTab].src}/>
                 </div>
                 <div><ValuesSection activeTab={activeTab} values={values} click={handleTabClick}/></div>
                 

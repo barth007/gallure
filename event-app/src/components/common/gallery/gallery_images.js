@@ -319,7 +319,7 @@ function ListImages(props) {
           object-position: center;
         }
         .img-2 {
-          aspect-ratio: 1.25;
+          aspect-ratio: 1.2;
           object-fit: auto;
           object-position: center;
           width: 100%;
@@ -336,7 +336,7 @@ function ListImages(props) {
           width: 100%;
         }
         .img-3 {
-          aspect-ratio: 1.49;
+          aspect-ratio: 1;
           object-fit: auto;
           object-position: center;
           width: 100%;

@@ -15,8 +15,10 @@ function BookingButton() {
           background-color: #c48383;
           color: #fff;
           padding: 20px 40px;
-          font: 700 20px / 1.3 Urbanist, -apple-system, Roboto, Helvetica, sans-serif;
+          font: 600 18px / 1.3 Urbanist, -apple-system, Roboto, Helvetica, sans-serif;
           cursor: pointer;
+          width: 232px;
+          height: 66px;
         }
 
         .bookingButton:focus {
@@ -25,7 +27,13 @@ function BookingButton() {
         }
         .bookingButton:hover{
           border: 3px solid #192e28;
-
+        }
+        @media (max-width: 991px){
+          .bookingButton{
+            font-size: 16px;
+            width: 213px;
+            height: 50px;
+          }
         }
       `}</style>
     </button>

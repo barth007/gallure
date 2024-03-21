@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function EventInnovationSection({content, src}) {
+function EventInnovationSection({content, images}) {
   
   return (
     <section className="eventInnovationSection">
@@ -13,7 +13,7 @@ function EventInnovationSection({content, src}) {
         </article>
         <div className="imageContainer">
           <img loading="lazy" 
-          src={src}
+          srcSet={images}
           alt="Creative event decoration" className="eventsImage" />
         </div>
       </div>
@@ -73,7 +73,6 @@ function EventInnovationSection({content, src}) {
         }
         .eventsImage {
           aspect-ratio: 1.27;
-          object-fit: cover;
           object-position: center;
           width: 100%;
           border-radius: 10px;

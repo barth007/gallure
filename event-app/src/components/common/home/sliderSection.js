@@ -1,12 +1,45 @@
 import React from 'react';
 import TestimonialCard from './sliderCard';
+import Swiper from './swiper';
+import TestimonyForm from './testimonyForm';
 
 function EventTestimonyHeader(props) {
   const {title, backgroundColor} = props;
+  const cardContent = [
+    {
+        
+        testimony: "It was an amazing experience having Gallure events handle my graduation and birthday parties. They worked with me from day 1 and planned within my budget as well. It was top notch, and I absolutely recommend having them take care of your events.",
+        name: "Ugochukwu Onyeakazi",
+        position: "Director"
+    },
+    {
+        
+        testimony: "Super excited to have come across this planner. My son’s birthday was awesome, event tho it was almost a last minute plan, Gallure came through and made our even worth it. I definitely recommend Gallure for your next events and you won’t regret it 😍",
+        name: "ChiChi Ndubuisi",
+        position: "Director"
+    },
+    {
+        
+      testimony: "I recommend Gallure for all your events. They are professionals in their field. ",
+      name: "Muyiwa Fapohunda",
+      position: "Director"
+  },
+  {
+        
+    testimony: "Excellent services from gallure event ",
+    name: "Daniel Amos",
+    position: "Director"
+},
+ 
+]
   return (
     <header className="highlight-title_bar" style={{backgroundColor: backgroundColor, padding: '50px 60px 0'}}>
      <div className='over_all-wrap'> <EventTitle title={title} /></div>
-      <TestimonialCard/>
+      {/* <TestimonialCard/> */}
+      <Swiper showArrowsProp={true} cardLength={"1089px"} cardHeight={"679px"} itemHeight={"500px"} itemWidth={"500px"} arrowLeft={"30px"} arrowRight={"30px"} arrowPosition={"280px"} indicatorPostion={"245px"}>
+        {cardContent.map((content)=>(<TestimonyForm cardContent={content} />))}
+
+      </Swiper>
       <div className="highlight-bar" />
       <style jsx>{`
         .highlight-title_bar header {

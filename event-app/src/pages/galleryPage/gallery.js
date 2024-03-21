@@ -2,10 +2,8 @@ import Footer from "../../components/common/footer/footer";
 import NavBar from "../../components/common/navbar/navbar";
 import ContactInfo from "../../components/common/infoBar/info";
 import BannerTitle from "../../components/common/gallery/banner";
-import EventCategories from "../../components/common/gallery/gallery_botton";
 import GalleryComponent from "../../components/common/gallery/gallery_images";
 import BannerFooter from "../../components/common/gallery/footerBanner";
-import ListGalleryImages from "../../components/common/gallery/list_gallery";
 
 
 

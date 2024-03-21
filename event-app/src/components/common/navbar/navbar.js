@@ -7,11 +7,11 @@ function NavBar(props) {
   const {
     image_src,
     text_color,
-    call_txt_color,
+    // call_txt_color,
     contact_txt_color,
-    call_btn_border,
+    // call_btn_border,
     con_btn_border,
-    call_btn_bcolor,
+    // call_btn_bcolor,
     con_btn_bcolor,
     navbackground,
     hamburgerColor

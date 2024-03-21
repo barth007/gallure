@@ -1,4 +1,6 @@
 import React from "react";
+import BookingButton from "../home/bannerButton";
+import events from "../../../images/about/events.jpg"
 
 function EventInfoComponent() {
   const title = (<span>About <br/> Gallure Events</span>)
@@ -8,7 +10,8 @@ function EventInfoComponent() {
         <div className="eventInfoContainer">
           <article className="eventContent">
             <div className="imageWrapper">
-              <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&"alt="Event presentation" className="eventImage" />
+              {/* <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&"alt="Event presentation" className="eventImage" /> */}
+              <img loading="lazy" srcSet={events} alt="Event presentation" className="eventImage"/>
             </div>
             <div className="textContent">
               <section className="textWrapper">
@@ -16,12 +19,19 @@ function EventInfoComponent() {
                 <p className="sectionDescription">
                   At Gallure Events, we are passionate about turning your dreams into unforgettable moments. As a premier event planning company, we take pride in our commitment to excellence, creativity, and seamless execution. From concept to completion, we are dedicated to crafting events that leave a lasting impression.
                 </p>
+                <div className="buttonCall"> 
+                <BookingButton/>
+              </div>
               </section>
+              
             </div>
           </article>
         </div>
       </section>
       <style jsx>{`
+      .buttonCall{
+        margin-top: 40px;
+      }
         .eventInfoSection {
           justify-content: center;
           align-items: center;
@@ -29,7 +39,7 @@ function EventInfoComponent() {
           background-color: #fff;
           display: flex;
           padding: 50px;
-          max-width: 1400px;
+          max-width: 1200px;
           margin-left: auto;
           margin-right: auto;
           margin-top: -120px;
@@ -48,24 +58,27 @@ function EventInfoComponent() {
        
         .imageWrapper {
           justify-content: center;
-          border-radius: 8px;
           display: flex;
           flex-grow: 1;
           flex-direction: column;
-          max-width: 600px;
+          max-width: 500px;
+          height:  max-content;
         }
         
         .eventImage {
           aspect-ratio: 0.76;
           object-fit: cover;
           width: 100%;
+          border-radius: 8px;
+          height: 800px;
         }
        
         .textContent {
           display: flex;
           flex-direction: column;
           line-height: normal;
-          max-width: 600px;
+          max-width: 500px;
+          height: 800px;
         }
         
         .textWrapper {
@@ -94,6 +107,7 @@ function EventInfoComponent() {
         @media (max-width: 991px) {
           .sectionDescription {
             margin-top: 40px;
+            font-size: 16px;
           }
           .eventInfoSection{
             margin-top: -38px;
@@ -104,9 +118,9 @@ function EventInfoComponent() {
             width: 100%;
           }
           .textContent {
-            height: 601px;
+            height: 500px;
             margin-top: 25px;
-            margin-bottom: 41px;
+            margin-bottom: 178px;
             width: 100%;
           }
           .imageWrapper {
@@ -125,6 +139,7 @@ function EventInfoComponent() {
           
           .eventImage {
             max-width: 100%;
+            height: 500px;
           }
           .eventContent {
             flex-direction: column;
@@ -134,12 +149,17 @@ function EventInfoComponent() {
           .eventInfoSection {
             padding: 0 20px;
           }
+          .buttonCall{
+            margin-top: 25px;
+            margin-bottom: 38px;
+          }
         }
 
         @media (max-width: 750px){
           .eventInfoSection{
             max-width: 659px;
           }
+         
 
         }
         @media (max-width: 650px){
