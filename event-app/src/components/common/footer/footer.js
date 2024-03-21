@@ -36,6 +36,15 @@ function Footer() {
             <p><Link style={{color: text_color}} className="nav-item" to='/gallery'>Gallery</Link></p>
             
           </section>
+         
+          <section className="get-started">
+            <header className="section-header">
+              <h3>Get Started</h3>
+              <div className="section-divider" />
+            </header>
+            <p><Link style={{color: text_color}} className="nav-item" to='/contact'>Consultation</Link></p>
+            <p><Link style={{color: text_color}} className="nav-item" to='/contact'>Booking</Link></p>
+          </section>
           <section className="other-info">
             <header className="section-header">
               <h3>Socials</h3>
@@ -48,14 +57,6 @@ function Footer() {
               <Link to=""><img src={tiktok} alt="Social Media Icon" className="icon" /></Link>
              <Link to="https://www.instagram.com/gallure_events?igsh=MXdmcGo0eXVqNDN0ZQ=="><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ff85b725b52a642a65d7a30b76d8aad07d8adf095bb4e518349212ebfd66562?apiKey=c79a152b41e64f7db55346c2899c15e3&" alt="Social Media Icon" className="icon" /></Link> 
             </div>
-          </section>
-          <section className="get-started">
-            <header className="section-header">
-              <h3>Get Started</h3>
-              <div className="section-divider" />
-            </header>
-            <p><Link style={{color: text_color}} className="nav-item" to='/contact'>Consultation</Link></p>
-            <p><Link style={{color: text_color}} className="nav-item" to='/contact'>Booking</Link></p>
           </section>
         </div>
       </footer>
@@ -81,7 +82,7 @@ function Footer() {
           flex-wrap: wrap;
           justify-content: space-between;
           max-width: 100%;
-          padding: 0 18px 50px;
+          padding: 0 0px 50px;
 
         }
         .footer-contact-info, .info, .other-info, .get-started {
@@ -93,6 +94,7 @@ function Footer() {
           color: #fff;
           font-weight: 600;
           text-transform: uppercase;
+          font-size: 15px;
         }
         .section-divider {
           border-bottom: 1px solid #af6183;
@@ -103,7 +105,7 @@ function Footer() {
           line-height: 28px;
           color: rgba(153,153,153,1);
           margin-top: 20px;
-          font-size: 16px;
+          font-size: 15px;
         }
         strong {
           color: #fff;
