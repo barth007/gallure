@@ -238,7 +238,13 @@ const Swiper = ({
                 }
                 @media (max-width: 400px){
                     .swiperRootContainer{
-                        margin: 0 -20px !important;
+                        margin: 0 -29px !important;
+                    }
+                    .leftArrow{
+                        margin-left: -56px !important;
+                    }
+                    .rightArrow{
+                        margin-right: -56px !important;
                     }
                 }
             `}</style>
