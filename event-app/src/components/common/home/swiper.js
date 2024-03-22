@@ -15,9 +15,11 @@ const Swiper = ({
     indicatorPostion
  }) => {
     const [startX, setStartX] = useState(0);
+    const [startY, setStartY] = useState(0);
     const [isMouseDown, setIsMouseDown] = useState(false);
     const [scrollLeft, setScrollLeft] = useState(0);
     const [showArrows, setShowArrows] = useState(false);
+    const [isPointerDown, setIsPointerDown] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
     const swiperRef = useRef(null);
 
@@ -28,10 +30,18 @@ const Swiper = ({
     useEffect(() => {
         if (swiperRef.current) {
             swiperRef.current.addEventListener('scroll', handleOnScroll);
+            swiperRef.current.addEventListener('touchstart', handleTouchStart);
+            swiperRef.current.addEventListener('touchmove', handleTouchMove);
+            swiperRef.current.addEventListener('touchend', handleTouchEnd);
+            swiperRef.current.addEventListener('touchcancel', handleTouchCancel);
         }
         return () => {
             if (swiperRef.current) {
                 swiperRef.current.removeEventListener('scroll', handleOnScroll);
+                swiperRef.current.removeEventListener('touchstart', handleTouchStart);
+                swiperRef.current.removeEventListener('touchmove', handleTouchMove);
+                swiperRef.current.removeEventListener('touchend', handleTouchEnd);
+                swiperRef.current.removeEventListener('touchcancel', handleTouchCancel);
             }
         };
     }, []);
@@ -61,6 +71,29 @@ const Swiper = ({
 
     const handleOnScroll = () => {
         setScrollLeft(swiperRef.current.scrollLeft);
+    }
+    const handleTouchStart = (event) => {
+        setStartX(event.touches[0].clientX);
+        setStartY(event.touches[0].clientY);
+        setIsPointerDown(true);
+    }
+    const handleTouchMove = (event) => {
+        if (!isPointerDown || !swiperRef.current) return;
+        console.log(event.touches[0])
+        const deltaX = startX - event.touches[0].clientX;
+        console.log(deltaX)
+        const deltaY = startY - event.touches[0].clientY;
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            event.preventDefault();
+            swiperRef.current.scrollLeft = scrollLeft + deltaX;
+        }
+    }
+    const handleTouchEnd = () => {
+        setIsPointerDown(false);
+    }
+
+    const handleTouchCancel = () => {
+        setIsPointerDown(false);
     }
 
     const handleArrowClick = (direction) => {
@@ -112,6 +145,10 @@ const Swiper = ({
                 )}
             </div>
             <div
+                 onTouchStart={handleTouchStart}
+                 onTouchMove={handleTouchMove}
+                 onTouchEnd={handleTouchEnd}
+                 onTouchCancel={handleTouchCancel}
                 onMouseDown={handleOnMouseDown}
                 onMouseMove={handleOnMouseMove}
                 onMouseUp={handleOnMouseUp}
@@ -241,10 +278,10 @@ const Swiper = ({
                         margin: 0 -29px !important;
                     }
                     .leftArrow{
-                        margin-left: -56px !important;
+                        margin-left: -50px !important;
                     }
                     .rightArrow{
-                        margin-right: -56px !important;
+                        margin-right: -50px !important;
                     }
                 }
             `}</style>

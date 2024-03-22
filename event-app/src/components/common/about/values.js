@@ -92,7 +92,7 @@ const Values = ()=>{
             margin-left: auto;
             margin-right: auto;
             border-radius: 20px;
-            max-width: 1200px;
+            max-width: 1026px;
             z-index: 1;
             margin-bottom: -597px;
         }
@@ -107,7 +107,7 @@ const Values = ()=>{
         }
         .value-title_wrap{
           
-            width: 28%;
+            width: 100%;
             padding: 20px;
         }
         @media (max-width: 991px) {

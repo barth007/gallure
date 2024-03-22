@@ -45,7 +45,7 @@ function EventInfoSection() {
         .event-info_wrapper{
           display: flex;
           margin-left: auto;
-          max-width: 1200px;
+          max-width: 1026px;
           margin-right: auto;
           gap: 20px;
         }
