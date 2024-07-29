@@ -35,9 +35,10 @@ const EventCategories = () => {
   const categories = [
     { label: 'Wedding', isActive: true },
     { label: 'Birthdays', isActive: false },
-    { label: 'Conferences', isActive: false },
-    { label: 'Seminars', isActive: false },
-    { label: 'Concerts', isActive: false },
+    { label: 'Baby Showers', isActive: false },
+    { label: 'Coperate Events', isActive: false },
+    { label: 'Marriage Proposal', isActive: false },
+    { label: 'Anniversaries', isActive: false },
   ];
 
   const categoriesRef = useRef(null);

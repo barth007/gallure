@@ -19,7 +19,7 @@ const Countdown = () => {
 
 
     const startTimer = () => {
-        const countdown = new Date("Febuary 29, 2024 00:00:00").getTime();
+        const countdown = new Date("March 01, 2024 23:00:00").getTime();
         interval.current = setInterval(() => {
             const now = new Date().getTime();
             const distance = countdown - now;

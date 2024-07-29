@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link, useNavigate} from "react-router-dom";
 import x from "../../../images/icons/x.png"
 
@@ -41,8 +41,8 @@ function NavigationMenu({ShowNavbar}) {
           <Link className="nav-item" to={item.route}><MenuItem name={item.name}  key={item.name} /></Link>
         ))}
         {/* <div className="community">Community</div> */}
-        <div className="loginAction">Call Us</div>
-        <div onClick={()=>navigate('/contact')} className="applyAction">Contact us</div>
+        {/* <div className="loginAction">Call Us</div> */}
+        <div onClick={()=>navigate('/contact')} className="applyAction">Get Started</div>
       </nav>
       <style jsx>{`
       @media (max-width: 991px) {
@@ -61,7 +61,7 @@ function NavigationMenu({ShowNavbar}) {
           z-index: 1;
           margin-left: -192px;
           margin-top: -7px;
-          height: 50vh;
+          
         }
         .menuHeader {
           display: flex;

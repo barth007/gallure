@@ -3,18 +3,19 @@ import EventInnovationSection from "./valueCard";
 
 
 
-function ValueCard({isActive, title, borderColor = '#1c2724', backgroundColor = 'rgba(243, 174, 236, 0.02)', onClick}) {
+function ValueCard({isActive, title, backgroundColor = 'rgba(243, 174, 236, 0.02)', onClick}) {
 
  
   return (
-    <div className={`value-card ${isActive} `} style={{ borderColor, backgroundColor }} onClick={onClick}>
-      <h3 className='title-btn' >{title}</h3>
+    <div className={`value-card ${isActive}`}  style={{ 
+       backgroundColor: isActive ? '#FFF' : backgroundColor}} onClick={onClick}>
+      <h3 className='title-btn' style={{ color: isActive ? '#0D0D0D': '#FFF'}} >{title}</h3>
     </div>
   );
 }
 
 function ValuesSection({values, click, activeTab}) {
-
+  
   
   return (
     <>
@@ -22,14 +23,13 @@ function ValuesSection({values, click, activeTab}) {
               
     <section>
       
-      {values.map((value, index) => (
-        // <ValueCard isActive={ index === activeTab ? 'active' : ''} key={value.id} title={value.title} onClick={()=>handleTabClick(index)}/>
-        <ValueCard 
+      {values.map((value, index) => {
+       return ( <ValueCard 
         isActive={ index === activeTab ? 'active' : ''} 
         key={value.id} 
         title={value.title} 
-        onClick={()=>click(index)}/>
-      ))}
+        onClick={()=>click(index)}/>)
+})}
                 
           
       <style jsx>{`
@@ -47,6 +47,7 @@ function ValuesSection({values, click, activeTab}) {
           padding: 21px;
           white-space: nowrap;
           cursor: pointer;
+          border: 1px solid #1c2724;
         }
         .primary-border {
           border: 1px solid #1c2724;

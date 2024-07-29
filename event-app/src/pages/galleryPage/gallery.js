@@ -2,8 +2,8 @@ import Footer from "../../components/common/footer/footer";
 import NavBar from "../../components/common/navbar/navbar";
 import ContactInfo from "../../components/common/infoBar/info";
 import BannerTitle from "../../components/common/gallery/banner";
-import EventCategories from "../../components/common/gallery/gallery_botton";
 import GalleryComponent from "../../components/common/gallery/gallery_images";
+import BannerFooter from "../../components/common/gallery/footerBanner";
 
 
 
@@ -18,9 +18,9 @@ const GalleryPage = ()=>{
     const con_btn_border="1px solid #FFF";
     const call_btn_bcolor="rgba(5, 6, 15, 0.04)";
     const con_btn_bcolor ="#192E28";
-    const title = "Don't take us by our word, view our Gallery";
+    const title = (<span>Don't take us by our<br/> word, view our<br/> Gallery</span>)
     const bannerTitleColor = "#ba716d";
-    const hamburgerColor = "#FFF";
+    const hamburgerColor = "#000";
     return(
         <>
            <section>
@@ -44,11 +44,12 @@ const GalleryPage = ()=>{
                     <BannerTitle title={title} color={bannerTitleColor}/>
                 </div>
                 <div>
-                    <EventCategories/>
+                    {/* <EventCategories/> */}
                 </div>
                 <div style={{paddingBottom: "10%"}}>
                     <GalleryComponent/>
                 </div>
+                <div><BannerFooter/></div>
                 <div ><Footer/></div>
             </section>
             <style jsx>{`

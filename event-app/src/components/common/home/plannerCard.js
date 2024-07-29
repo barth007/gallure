@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import babyshower from "../../../images/cards/babyshower.jpeg";
 import proposals from "../../../images/cards/proposals.jpg";
-import birthdays from "../../../images/cards/birthdays.jpg";
+import birthdays from "../../../images/cards/birthdays.jpeg";
 import corporate from "../../../images/cards/coporate.jpg";
 import anniversaries from "../../../images/cards/anniversaries.jpg";
 import wedding from "../../../images/cards/wedding.jpg"
@@ -154,7 +154,7 @@ function PlannerCard() {
         margin-top: 9px;
         width: 100%;
         height: 100px;
-        font-size: 17px;
+        font-size: 18px;
       }
       .planner-footer {
        
@@ -222,7 +222,7 @@ function PlannerCard() {
       
       .planner-text {
         line-height: 24px;
-        font-size: 18px
+        font-size: 14px
     }
 
       }
@@ -250,6 +250,30 @@ function PlannerCard() {
       border-radius: 20px;
     }
       
+  }
+  @media (max-width: 384px){
+    .planner-text{
+      line-height: 21px;
+      height: 52px;
+    }
+  }
+  @media (max-width: 370px){
+    .slick-slide div {
+      width: 250px;
+    }
+    .planner-text{
+      line-height: 21px;
+      height: 52px;
+    }
+  }
+  @media (max-width: 320px){
+    .planner-text{
+      line-height: 21px;
+      height: 52px;
+    }
+    .slick-slide div{
+      width: 225px;
+    }
   }
   
     `}</style>

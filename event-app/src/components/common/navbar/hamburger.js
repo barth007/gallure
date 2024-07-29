@@ -30,7 +30,7 @@ export default function GalleryHeader() {
                         </div>
                        <div> {isSidebarOpen &&(<NavigationMenu/>)}</div>
                         <div className="contact-options">
-                            <div className="contact-option">Call Us</div>
+                            {/* <div className="contact-option">Call Us</div> */}
                             <div className="contact-option green">Contact Us</div>
                         </div>
                     </div>

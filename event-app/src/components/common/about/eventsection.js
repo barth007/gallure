@@ -1,26 +1,37 @@
 import React from "react";
+import BookingButton from "../home/bannerButton";
+import events from "../../../images/about/events.jpg"
 
 function EventInfoComponent() {
+  const title = (<span>About <br/> Gallure Events</span>)
   return (
     <>
       <section className="eventInfoSection">
         <div className="eventInfoContainer">
           <article className="eventContent">
             <div className="imageWrapper">
-              <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&"alt="Event presentation" className="eventImage" />
+              {/* <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d18775865da2fbdeabb72e5db78d95f2a91c55e7f5d8a24d1ee63953b55430e9?apiKey=c79a152b41e64f7db55346c2899c15e3&"alt="Event presentation" className="eventImage" /> */}
+              <img loading="lazy" srcSet={events} alt="Event presentation" className="eventImage"/>
             </div>
             <div className="textContent">
               <section className="textWrapper">
-                <h2 className="sectionTitle">About Gallure Events</h2>
+                <h2 className="sectionTitle">{title}</h2>
                 <p className="sectionDescription">
                   At Gallure Events, we are passionate about turning your dreams into unforgettable moments. As a premier event planning company, we take pride in our commitment to excellence, creativity, and seamless execution. From concept to completion, we are dedicated to crafting events that leave a lasting impression.
                 </p>
+                <div className="buttonCall"> 
+                <BookingButton/>
+              </div>
               </section>
+              
             </div>
           </article>
         </div>
       </section>
       <style jsx>{`
+      .buttonCall{
+        margin-top: 40px;
+      }
         .eventInfoSection {
           justify-content: center;
           align-items: center;
@@ -28,74 +39,48 @@ function EventInfoComponent() {
           background-color: #fff;
           display: flex;
           padding: 50px;
-          width: 85%;
+          max-width: 1200px;
           margin-left: auto;
           margin-right: auto;
           margin-top: -120px;
+          
         }
-        @media (max-width: 991px) {
-          .eventInfoSection {
-            padding: 0 20px;
-          }
-        }
+        
         .eventInfoContainer {
           margin-top: 38px;
-          width: 100%;
-          max-width: 1248px;
         }
-        @media (max-width: 991px) {
-          .eventInfoContainer {
-            max-width: 100%;
-          }
-        }
+       
         .eventContent {
           gap: 20px;
           display: flex;
           margin-top: -36px;
         }
-        @media (max-width: 991px) {
-          .eventContent {
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0;
-          }
-        }
+       
         .imageWrapper {
           justify-content: center;
-          border-radius: 8px;
           display: flex;
           flex-grow: 1;
           flex-direction: column;
-          width: 500px;
+          max-width: 500px;
+          height:  max-content;
         }
-        @media (max-width: 991px) {
-          .imageWrapper {
-            max-width: 100%;
-            margin-top: 24px;
-          }
-        }
+        
         .eventImage {
           aspect-ratio: 0.76;
           object-fit: cover;
           width: 100%;
+          border-radius: 8px;
+          height: 800px;
         }
-        @media (max-width: 991px) {
-          .eventImage {
-            max-width: 100%;
-          }
-        }
+       
         .textContent {
           display: flex;
           flex-direction: column;
           line-height: normal;
-          margin-left: 20px;
-          width: 500px;
+          max-width: 500px;
+          height: 800px;
         }
-        @media (max-width: 991px) {
-          .textContent {
-            width: 100%;
-          }
-        }
+        
         .textWrapper {
           border-radius: 12px;
           background-color: #151515;
@@ -104,26 +89,16 @@ function EventInfoComponent() {
           flex-direction: column;
           align-items: start;
           width: 100%;
-          padding: 50px 80px 50px 40px;
+          padding: 150px 80px 50px 40px;
         }
-        @media (max-width: 991px) {
-          .textWrapper {
-            padding: 20px;
-          }
-        }
+       
         .sectionTitle {
           color: #fff;
           letter-spacing: -3px;
           margin-top: -9px;
           font: 700 60px/72px Helvetica, Arial, sans-serif;
         }
-        @media (max-width: 991px) {
-          .sectionTitle {
-            margin-top: 40px;
-            font-size: 40px;
-            line-height: 53px;
-          }
-        }
+        
         .sectionDescription {
           color: #fff;
           margin-top: 49px;
@@ -132,44 +107,108 @@ function EventInfoComponent() {
         @media (max-width: 991px) {
           .sectionDescription {
             margin-top: 40px;
+            font-size: 16px;
           }
           .eventInfoSection{
             margin-top: -38px;
             border-radius: 8px;
-            width: 643px;
+            max-width: 740px;
           }
           .imageWrapper {
-            width: 581px;
+            width: 100%;
           }
           .textContent {
-            margin-left: -9px;
-            height: 601px;
+            height: 500px;
             margin-top: 25px;
-            margin-bottom: 41px;
+            margin-bottom: 178px;
+            width: 100%;
           }
-        }
-        @media (max-width: 600px) {
+          .imageWrapper {
+            max-width: 100%;
+            margin-top: 24px;
+          }
+          
+          .sectionTitle {
+            margin-top: 40px;
+            font-size: 40px;
+            line-height: 53px;
+          }
           .textWrapper {
-            width: 337px;
-            margin-left: -18px;
-            margin-top: 15px;
-            margin-bottom: 20px;
+            padding: 20px;
           }
-
-          .eventInfoSection{
-            margin-top: -38px;
-            border-radius: 8px;
-            width: 379px;
+          
+          .eventImage {
+            max-width: 100%;
+            height: 500px;
           }
           .eventContent {
-            margin-top: -45px;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+          }
+          .eventInfoSection {
+            padding: 0 20px;
+          }
+          .buttonCall{
+            margin-top: 25px;
+            margin-bottom: 38px;
+          }
+        }
+
+        @media (max-width: 750px){
+          .eventInfoSection{
+            max-width: 659px;
+          }
+         
+
+        }
+        @media (max-width: 650px){
+          .eventInfoSection{
+            max-width: 606px;
           }
 
         }
         @media (max-width: 600px){
-          .textWrapper{
-            margin-left: 16px;
+            .eventInfoSection{
+              max-width: 505px;
+              margin-top: -52px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+        }
+        @media (max-width: 500px){
+          .eventInfoSection {
+            width: 383px;
+            margin-top: -52px;
+            margin-left: auto;
+            margin-right: auto;
           }
+        }
+        @media (max-width: 400px){
+          .eventInfoSection{
+            max-width: 345px;
+
+          }
+          .sectionTitle{
+            font-size: 30px;
+            line-height: 37px;
+          }
+          .sectionDescription{
+            font-size: 16px;
+            line-height: 30px;
+
+          }
+        }
+        @media (max-width: 360px){
+          .eventInfoSection {
+            max-width: 335px;
+          }
+        }
+        @media (max-width: 320px){
+          .eventInfoSection {
+            max-width: 295px;
+          }
+
         }
         
       `}</style>

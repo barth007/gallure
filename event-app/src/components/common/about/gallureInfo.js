@@ -38,23 +38,47 @@ function EventInfoSection() {
         .event-info-section {
           background-color: #192e28;
           display: flex;
-          justify-content: center;
-          align-items: center;
-          padding-left: 50px;
-          padding-right: 50px;
           padding-top: 50px;
           padding-bottom: 100px;
+          width: 100%;
         }
         .event-info_wrapper{
           display: flex;
-          width: 1077px;
           margin-left: auto;
+          max-width: 1026px;
           margin-right: auto;
+          gap: 20px;
         }
         @media (max-width: 991px) {
           .event-info-section {
             padding: 0 20px;
           }
+          .event-info_wrapper{
+            display: flex;
+            flex-direction: column;
+            margin-top: 45px;
+            margin-bottom: 45px;
+            padding-bottom: 50px;
+            margin-right: auto;
+            margin-left: auto;
+          }
+          
+        }
+        @media (max-width: 600px) {
+          // .event-info_wrapper{
+          //   max-width: 500px;
+            
+          // }
+
+        }
+        @media (max-width: 500px) {
+          // .event-info_wrapper{
+          //   width: 100%;
+          // }
+          // .event-info_wrapper{
+          //   width: 89%;
+          // }
+
         }
       `}</style>
 
@@ -77,16 +101,18 @@ function EventInfoCard({ imageUrl, imageAlt,subTitle, title, description }) {
           display: flex;
           flex-direction: column;
           align-items: start;
-          width: 100%;
-          padding: 50px;
-          margin: 0 10px;
+          max-width: 600px;
           box-sizing: border-box;
+          padding: 20px;
+          margin-top: 25px;
+          padding-bottom: 13%;
         }
-        @media (max-width: 991px) {
-          .event-info-card {
-            padding: 20px;
-          }
+        
+        .event-title {
+          font-size: 40px;
+          line-height: 53px;
         }
+        
         .event-image_card {
           aspect-ratio: 1;
           object-fit: cover;
@@ -104,23 +130,68 @@ function EventInfoCard({ imageUrl, imageAlt,subTitle, title, description }) {
           font-size: 48px;
           margin-top: -9px;
         }
-        @media (max-width: 991px) {
-          .event-title {
-            font-size: 40px;
-            line-height: 53px;
-          }
-        }
+        
         .event-description {
           color: #fff;
           margin-top: 45px;
           font-size: 20px;
-         -height: 32px;
+          line-height: 32px;
           font-weight: 500;
         }
         @media (max-width: 991px) {
+         
           .event-description {
             margin-top: 40px;
           }
+          .event-title {
+            font-size: 30px;
+            line-height: 45px;
+          }
+          .event-info-card {
+            padding: 20px;
+            margin-top: 25px;
+            padding-bottom: 13%;
+            max-width: 689px;
+          }
+          .event-description {
+            font-size: 23px;
+            margin-top: 17px;
+          }
+        }
+        
+        @media (max-width: 600px){
+          .event-title {
+            font-size: 30px;
+          }
+          .event-image_card {
+            width: 51px;
+          }
+          .event-description {
+            font-size: 16px;
+            margin-top: 17px;
+          }
+          .event-info-card{
+            max-width: 500px;
+          }
+        }
+        @media (max-width: 500px){
+          .event-info-card {
+            max-width: 341px;
+          }
+        }
+        @media (max-width: 390px){
+            .event-info-card{
+              max-width: 304px;
+            }
+        }
+        @media (max-width: 340px){
+          .event-info-card{
+            max-width: 255px;
+          }
+          .event-title {
+            font-size: 25px;
+        }
+          
         }
       `}</style>
     </article>
