@@ -1,15 +1,15 @@
 import React, {useState} from "react";
 import emailjs from 'emailjs-com'
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
 
-dotenv.config();
+// dotenv.config();
 
 
 function ContactForm() {
-  const service_id = process.env.REACT_APP_SERVICE_ID
-  const user_id = process.env.REACT_APP_USER_ID
-  const template_id = process.env.REACT_APP_TEMPLATE_ID
+  const service_id = 'process.env.REACT_APP_SERVICE_ID'
+  const user_id = 'process.env.REACT_APP_USER_ID'
+  const template_id = 'process.env.REACT_APP_TEMPLATE_ID'
   console.log(`service_id: ${service_id}, user_id: ${user_id}, template_id: ${template_id}`)
   const [formData, setFormData] = useState({
     from_name: '',
