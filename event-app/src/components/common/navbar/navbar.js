@@ -1,5 +1,5 @@
 import React, {useRef, useState} from "react";
-import { Link, useNavigate} from "react-router-dom";
+import { NavLink, Link, useNavigate} from "react-router-dom";
 import NavigationMenu from "./sideBar";
 
 function NavBar(props) {
@@ -52,11 +52,11 @@ function NavBar(props) {
       <button className="hamburger" style={{color: hamburgerColor}}onClick={ShowNavbar}>☰</button>
       <nav ref={navRef} className="navigation">
         <ul className="nav-links" style={{color: text_color}}>
-          <li  className="nav-item"><Link  style={{color: text_color}} className="nav-item" to='/'>Home</Link></li>
+          <li  className="nav-item"><NavLink  style={{color: text_color}} className="nav-item" to='/'>Home</NavLink></li>
           <li className="nav-divider"></li>
-          <li className="nav-item"><Link  style={{color: text_color}} className="nav-item" to='/about'>About Us</Link></li>
+          <li className="nav-item"><NavLink  style={{color: text_color}} className="nav-item" to='/about'>About Us</NavLink></li>
           <li className="nav-divider"></li>
-          <li className="nav-item"><Link  style={{color: text_color}} className="nav-item" to='/gallery'>Gallery</Link></li>
+          <li className="nav-item"><NavLink  style={{color: text_color}} className="nav-item" to='/gallery'>Gallery</NavLink></li>
         </ul>
         
         <div className="contact-containers">
@@ -70,9 +70,10 @@ function NavBar(props) {
      
     <style jsx>{`
 .header {
-display: flex;
-justify-content: space-around;
-gap: 10px;
+  
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
 }
 .logo-container {
 display: flex;
@@ -124,7 +125,9 @@ color: #05060F;
 font-family: "Urbanist", sans-serif;
 font-size: 1rem;
 text-decoration: none;
-
+}
+.nav-item:hover{
+  color:#c48383 !important;
 
 }
 .nav-divider {

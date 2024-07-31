@@ -8,13 +8,13 @@ const BannerFooter = ()=>{
             .main-banner_footer{
                 max-width: 100%;
                 background-color: #EB9BFF38;
-                height: 100vh;
+                height: 50vh;
                 z-index: -1;
                 
             }
             @media (max-width: 900px){
                 .main-banner_footer{
-                    height: 50vh;
+                    height: 30vh;
                 }
             }
             @media (max-width: 600px){
