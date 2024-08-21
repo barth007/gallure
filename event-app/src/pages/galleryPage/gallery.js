@@ -40,14 +40,14 @@ import wedding10 from "../../images/gallery/weddings/10.jpg"
 
 
 
-const categories = ['Concerts', 'Wedding', 'Birthdays', 'Conferences', 'Seminars'];
+const categories = ['Anniversaries', 'Weddings', 'Birthdays', 'Conferences', 'Seminars'];
 
 const imageSources = {
-    Wedding: [wedding1, wedding2, wedding3, wedding4, wedding5, wedding6, wedding7, wedding8, wedding9, wedding10],
+    Weddings: [wedding1, wedding2, wedding3, wedding4, wedding5, wedding6, wedding7, wedding8, wedding9, wedding10],
     Birthdays: [photo1, photo2, photo3, photo4, photo5, photo6],
     Conferences: [/* array of conference image URLs */],
     Seminars: [/* array of seminar image URLs */],
-    Concerts: [reunion1, reunion2, reunion3, reunion4, reunion5, reunion6, reunion7, reunion8, reunion9, reunion10],
+    Anniversaries: [reunion1, reunion2, reunion3, reunion4, reunion5, reunion6, reunion7, reunion8, reunion9, reunion10],
     };
 const GalleryPage = ()=>{
     
@@ -64,7 +64,7 @@ const GalleryPage = ()=>{
     const bannerTitleColor = "#ba716d";
     const hamburgerColor = "#000";
 
-    const [activeCategory, setActiveCategory] = useState('Concerts');
+    const [activeCategory, setActiveCategory] = useState('Anniversaries');
     // const [images, setImages] = useState([]);
     // const [loading, setLoading] = useState(true);
     const {loadedImages, loading} = useImagePreloader(imageSources[activeCategory]);
