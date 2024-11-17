@@ -8,7 +8,7 @@ function ContactInfo(props) {
       type: "email",
       src: "https://cdn.builder.io/api/v1/image/assets/TEMP/f7d642bfa564725ba43404d33da305925a32974ca716cb04015b762cb1e7d3a3?apiKey=c79a152b41e64f7db55346c2899c15e3&",
       alt: "Email Icon",
-      contactInfo: "info@gallure53llc.com",
+      contactInfo: "info@gallure53.com",
     },
     {
       type: "phone",
